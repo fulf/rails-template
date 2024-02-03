@@ -49,6 +49,8 @@ gem 'bootsnap', require: false
 gem 'lograge'
 
 group :development, :test do
+  gem 'bullet'
+
   gem 'factory_bot_rails'
   gem 'faker'
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
