@@ -66,7 +66,9 @@ group :development do
   gem 'rubocop-rspec', require: false
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
-  # gem "rack-mini-profiler"
+  gem 'memory_profiler'
+  gem 'rack-mini-profiler'
+  gem 'stackprof'
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
