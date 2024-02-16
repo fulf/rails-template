@@ -47,9 +47,13 @@ gem 'bootsnap', require: false
 # gem "image_processing", "~> 1.2"
 
 gem 'lograge'
+gem 'rack-attack'
+gem 'strong_migrations'
 
 group :development, :test do
+  gem 'brakeman'
   gem 'bullet'
+  gem 'bundler-audit'
 
   gem 'factory_bot_rails'
   gem 'faker'
@@ -84,4 +88,4 @@ group :test do
   gem 'selenium-webdriver'
 end
 
-gem "hotwire-livereload", "~> 1.3", :group => :development
+gem 'hotwire-livereload', '~> 1.3', group: :development
