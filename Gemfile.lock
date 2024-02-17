@@ -213,6 +213,9 @@ GEM
       racc (~> 1.4)
     nokogiri (1.16.1-x86_64-linux)
       racc (~> 1.4)
+    notable (0.5.2)
+      activesupport (>= 6.1)
+      safely_block (>= 0.4)
     oj (3.16.3)
       bigdecimal (>= 3.0)
     parallel (1.24.0)
@@ -321,6 +324,7 @@ GEM
     ruby-progressbar (1.13.0)
     ruby2_keywords (0.0.5)
     rubyzip (2.3.2)
+    safely_block (0.4.0)
     selenium-webdriver (4.17.0)
       base64 (~> 0.2)
       rexml (~> 3.2, >= 3.2.5)
@@ -385,6 +389,7 @@ DEPENDENCIES
   jbuilder
   lograge
   memory_profiler
+  notable
   oj
   pg
   puma (>= 5.0)

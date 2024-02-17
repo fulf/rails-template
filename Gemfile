@@ -54,6 +54,8 @@ gem 'strong_migrations'
 
 gem 'oj'
 
+gem 'notable'
+
 group :development, :test do
   gem 'bullet'
 
