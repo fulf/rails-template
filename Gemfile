@@ -68,6 +68,8 @@ gem 'ransack'
 
 gem 'pagy'
 
+gem 'data_migrate'
+
 group :development, :test do
   gem 'bullet'
 
