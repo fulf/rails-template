@@ -58,6 +58,8 @@ gem 'notable'
 
 gem 'groupdate'
 
+gem 'discard'
+
 group :development, :test do
   gem 'bullet'
 
