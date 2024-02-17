@@ -64,6 +64,8 @@ gem 'friendly_id'
 
 gem 'activerecord-import'
 
+gem 'ransack'
+
 group :development, :test do
   gem 'bullet'
 
