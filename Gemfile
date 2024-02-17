@@ -72,6 +72,7 @@ group :development do
   gem 'rubocop-rspec', require: false
 
   gem 'brakeman'
+  gem 'reek'
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   gem 'memory_profiler'
