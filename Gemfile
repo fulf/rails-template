@@ -56,6 +56,8 @@ gem 'oj'
 
 gem 'notable'
 
+gem 'groupdate'
+
 group :development, :test do
   gem 'bullet'
 
