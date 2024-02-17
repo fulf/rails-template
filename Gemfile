@@ -62,6 +62,8 @@ gem 'discard'
 
 gem 'friendly_id'
 
+gem 'activerecord-import'
+
 group :development, :test do
   gem 'bullet'
 
