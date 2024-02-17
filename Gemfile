@@ -50,6 +50,8 @@ gem 'lograge'
 
 gem 'rack-attack'
 
+gem 'strong_migrations'
+
 group :development, :test do
   gem 'bullet'
 
