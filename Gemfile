@@ -66,6 +66,8 @@ gem 'activerecord-import'
 
 gem 'ransack'
 
+gem 'pagy'
+
 group :development, :test do
   gem 'bullet'
 
