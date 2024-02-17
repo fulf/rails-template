@@ -48,6 +48,8 @@ gem 'bootsnap', require: false
 
 gem 'lograge'
 
+gem 'rack-attack'
+
 group :development, :test do
   gem 'bullet'
 
