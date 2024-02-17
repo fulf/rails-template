@@ -84,6 +84,7 @@ group :development do
   gem 'rubocop-rspec', require: false
 
   gem 'brakeman'
+  gem 'bundler-audit'
   gem 'reek'
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
