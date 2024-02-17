@@ -52,6 +52,8 @@ gem 'rack-attack'
 
 gem 'strong_migrations'
 
+gem 'oj'
+
 group :development, :test do
   gem 'bullet'
 

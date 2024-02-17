@@ -213,6 +213,8 @@ GEM
       racc (~> 1.4)
     nokogiri (1.16.1-x86_64-linux)
       racc (~> 1.4)
+    oj (3.16.3)
+      bigdecimal (>= 3.0)
     parallel (1.24.0)
     parser (3.3.0.5)
       ast (~> 2.4.1)
@@ -383,6 +385,7 @@ DEPENDENCIES
   jbuilder
   lograge
   memory_profiler
+  oj
   pg
   puma (>= 5.0)
   rack-attack
