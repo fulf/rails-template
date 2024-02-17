@@ -85,6 +85,7 @@ group :development do
 
   gem 'brakeman'
   gem 'bundler-audit'
+  gem 'overcommit'
   gem 'reek'
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
