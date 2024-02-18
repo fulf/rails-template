@@ -272,6 +272,10 @@ end
 # source://msgpack//lib/msgpack/core_ext.rb#17
 class NilClass
   include ::MessagePack::CoreExt
+  include ::FriendlyId::Reserved::Configuration
+  include ::FriendlyId::Scoped::Configuration
+  include ::FriendlyId::SimpleI18n::Configuration
+  include ::FriendlyId::Slugged::Configuration
 
   private
 

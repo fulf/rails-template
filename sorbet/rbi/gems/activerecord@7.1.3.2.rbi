@@ -8190,7 +8190,6 @@ end
 #
 # source://activerecord//lib/active_record/base.rb#282
 class ActiveRecord::Base
-  include ::ActionText::Encryption
   include ::ActiveModel::Access
   include ::ActiveRecord::Core
   include ::ActiveRecord::Persistence
@@ -8252,10 +8251,6 @@ class ActiveRecord::Base
   include ::ActiveRecord::Marshalling::Methods
   include ::Notable::ValidationErrors
   include ::FriendlyId::UnfriendlyUtils
-  include ::ActiveStorage::Attached::Model
-  include ::ActiveStorage::Reflection::ActiveRecordExtensions
-  include ::ActionText::Attribute
-  include ::Turbo::Broadcastable
   extend ::ActiveModel::Naming
   extend ::ActiveSupport::Benchmarkable
   extend ::ActiveSupport::DescendantsTracker
@@ -8319,10 +8314,6 @@ class ActiveRecord::Base
   extend ::OrmAdapter::ToAdapter
   extend ::Lockbox::Model
   extend ::Lockbox::Model::Attached
-  extend ::ActiveStorage::Attached::Model::ClassMethods
-  extend ::ActiveStorage::Reflection::ActiveRecordExtensions::ClassMethods
-  extend ::ActionText::Attribute::ClassMethods
-  extend ::Turbo::Broadcastable::ClassMethods
   extend ::ActiveRecord::Import::Connection
 
   # source://activesupport/7.1.3.2/lib/active_support/callbacks.rb#70

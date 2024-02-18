@@ -91,6 +91,8 @@ gem 'lockbox'
 gem 'pundit'
 gem 'rolify'
 
+gem 'logidze'
+
 group :development, :test do
   gem 'bullet'
 

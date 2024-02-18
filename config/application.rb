@@ -19,6 +19,10 @@ module ModifyTheProjectTitle
     # Common ones are `templates`, `generators`, or `middleware`, for example.
     config.autoload_lib(ignore: %w[assets tasks])
 
+    config.active_record.schema_format = :sql
+
+    config.logidze.ignore_log_data_by_default = true
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
