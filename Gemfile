@@ -84,7 +84,10 @@ gem 'rswag-ui'
 
 gem 'sorbet-runtime'
 
+gem 'authtrail'
+gem 'blind_index'
 gem 'devise'
+gem 'lockbox'
 gem 'pundit'
 gem 'rolify'
 

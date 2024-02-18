@@ -79,7 +79,11 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.6)
       public_suffix (>= 2.0.2, < 6.0)
+    argon2-kdf (0.2.0)
     ast (2.4.2)
+    authtrail (0.5.0)
+      railties (>= 6.1)
+      warden
     base64 (0.2.0)
     bcrypt (3.1.20)
     bigdecimal (3.1.6)
@@ -90,6 +94,9 @@ GEM
       csv
       railties (>= 6.1)
       safely_block (>= 0.4)
+    blind_index (2.4.0)
+      activesupport (>= 6.1)
+      argon2-kdf (>= 0.1.1)
     bootsnap (1.18.3)
       msgpack (~> 1.2)
     brakeman (6.1.2)
@@ -210,6 +217,7 @@ GEM
     listen (3.8.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
+    lockbox (1.3.3)
     lograge (0.14.0)
       actionpack (>= 4)
       activesupport (>= 4)
@@ -510,7 +518,9 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord-import
+  authtrail
   blazer
+  blind_index
   bootsnap
   brakeman
   bullet
@@ -529,6 +539,7 @@ DEPENDENCIES
   importmap-rails
   jbuilder
   letter_opener
+  lockbox
   lograge
   memory_profiler
   notable

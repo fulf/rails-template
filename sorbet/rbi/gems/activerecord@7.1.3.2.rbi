@@ -8315,7 +8315,10 @@ class ActiveRecord::Base
   extend ::ActiveRecord::Suppressor::ClassMethods
   extend ::ActiveRecord::Normalization::ClassMethods
   extend ::Ransack::Adapters::ActiveRecord::Base
+  extend ::BlindIndex::Model
   extend ::OrmAdapter::ToAdapter
+  extend ::Lockbox::Model
+  extend ::Lockbox::Model::Attached
   extend ::ActiveStorage::Attached::Model::ClassMethods
   extend ::ActiveStorage::Reflection::ActiveRecordExtensions::ClassMethods
   extend ::ActionText::Attribute::ClassMethods
@@ -19113,6 +19116,8 @@ end
 
 # source://activerecord//lib/active_record/dynamic_matchers.rb#26
 class ActiveRecord::DynamicMatchers::Method
+  include ::BlindIndex::Extensions::DynamicMatchers
+
   # @return [Method] a new instance of Method
   #
   # source://activerecord//lib/active_record/dynamic_matchers.rb#52
@@ -19138,7 +19143,7 @@ class ActiveRecord::DynamicMatchers::Method
 
   # @return [Boolean]
   #
-  # source://activerecord//lib/active_record/dynamic_matchers.rb#59
+  # source://blind_index/2.4.0/lib/blind_index/extensions.rb#49
   def valid?; end
 
   private
@@ -28398,6 +28403,8 @@ end
 
 # source://activerecord//lib/active_record/relation/predicate_builder.rb#4
 class ActiveRecord::PredicateBuilder
+  include ::BlindIndex::Extensions::PredicateBuilder
+
   # @return [PredicateBuilder] a new instance of PredicateBuilder
   #
   # source://activerecord//lib/active_record/relation/predicate_builder.rb#12
@@ -28406,8 +28413,8 @@ class ActiveRecord::PredicateBuilder
   # source://activerecord//lib/active_record/relation/predicate_builder.rb#53
   def [](attr_name, value, operator = T.unsafe(nil)); end
 
-  # source://activerecord//lib/active_record/relation/predicate_builder.rb#57
-  def build(attribute, value, operator = T.unsafe(nil)); end
+  # source://blind_index/2.4.0/lib/blind_index/extensions.rb#15
+  def build(attribute, value, *args); end
 
   # source://activerecord//lib/active_record/relation/predicate_builder.rb#67
   def build_bind_attribute(column_name, value); end
@@ -32109,6 +32116,7 @@ end
 #
 # source://activerecord//lib/active_record/relation.rb#5
 class ActiveRecord::Relation
+  include ::Lockbox::Calculations
   include ::Enumerable
   include ::ActiveRecord::Delegation
   include ::ActiveRecord::Explain
@@ -35141,6 +35149,8 @@ end
 
 # source://activerecord//lib/active_record/table_metadata.rb#4
 class ActiveRecord::TableMetadata
+  include ::BlindIndex::Extensions::TableMetadata
+
   # @return [TableMetadata] a new instance of TableMetadata
   #
   # source://activerecord//lib/active_record/table_metadata.rb#7
@@ -37646,18 +37656,20 @@ end
 
 # source://activerecord//lib/active_record/validations/uniqueness.rb#5
 class ActiveRecord::Validations::UniquenessValidator < ::ActiveModel::EachValidator
+  include ::BlindIndex::Extensions::UniquenessValidator
+
   # @return [UniquenessValidator] a new instance of UniquenessValidator
   #
   # source://activerecord//lib/active_record/validations/uniqueness.rb#6
   def initialize(options); end
 
-  # source://activerecord//lib/active_record/validations/uniqueness.rb#19
+  # source://blind_index/2.4.0/lib/blind_index/extensions.rb#40
+  def build_relation(klass, attribute, value); end
+
+  # source://blind_index/2.4.0/lib/blind_index/extensions.rb#31
   def validate_each(record, attribute, value); end
 
   private
-
-  # source://activerecord//lib/active_record/validations/uniqueness.rb#111
-  def build_relation(klass, attribute, value); end
 
   # @return [Boolean]
   #
