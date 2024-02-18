@@ -279,6 +279,9 @@ class Blazer::Query
     sig { params(value: T::Enumerable[::Blazer::Audit]).void }
     def audits=(value); end
 
+    sig { params(args: T.untyped, blk: T.untyped).returns(::User) }
+    def build_creator(*args, &blk); end
+
     sig { returns(T::Array[T.untyped]) }
     def check_ids; end
 
@@ -292,6 +295,18 @@ class Blazer::Query
 
     sig { params(value: T::Enumerable[::Blazer::Check]).void }
     def checks=(value); end
+
+    sig { params(args: T.untyped, blk: T.untyped).returns(::User) }
+    def create_creator(*args, &blk); end
+
+    sig { params(args: T.untyped, blk: T.untyped).returns(::User) }
+    def create_creator!(*args, &blk); end
+
+    sig { returns(T.nilable(::User)) }
+    def creator; end
+
+    sig { params(value: T.nilable(::User)).void }
+    def creator=(value); end
 
     sig { returns(T::Array[T.untyped]) }
     def dashboard_ids; end
@@ -320,6 +335,9 @@ class Blazer::Query
 
     sig { params(value: T::Enumerable[::Blazer::Dashboard]).void }
     def dashboards=(value); end
+
+    sig { returns(T.nilable(::User)) }
+    def reload_creator; end
   end
 
   module GeneratedAssociationRelationMethods

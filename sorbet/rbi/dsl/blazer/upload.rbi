@@ -5,6 +5,7 @@
 # Please instead update this file by running `bin/tapioca dsl Blazer::Upload`.
 
 class Blazer::Upload
+  include GeneratedAssociationMethods
   extend CommonRelationMethods
   extend GeneratedRelationMethods
 
@@ -260,6 +261,26 @@ class Blazer::Upload
 
     sig { returns(::Blazer::Upload) }
     def third_to_last!; end
+  end
+
+  module GeneratedAssociationMethods
+    sig { params(args: T.untyped, blk: T.untyped).returns(T.untyped) }
+    def build_creator(*args, &blk); end
+
+    sig { params(args: T.untyped, blk: T.untyped).returns(T.untyped) }
+    def create_creator(*args, &blk); end
+
+    sig { params(args: T.untyped, blk: T.untyped).returns(T.untyped) }
+    def create_creator!(*args, &blk); end
+
+    sig { returns(T.untyped) }
+    def creator; end
+
+    sig { params(value: T.untyped).void }
+    def creator=(value); end
+
+    sig { returns(T.untyped) }
+    def reload_creator; end
   end
 
   module GeneratedAssociationRelationMethods

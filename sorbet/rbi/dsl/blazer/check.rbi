@@ -265,8 +265,17 @@ class Blazer::Check
   end
 
   module GeneratedAssociationMethods
+    sig { params(args: T.untyped, blk: T.untyped).returns(::User) }
+    def build_creator(*args, &blk); end
+
     sig { params(args: T.untyped, blk: T.untyped).returns(::Blazer::Query) }
     def build_query(*args, &blk); end
+
+    sig { params(args: T.untyped, blk: T.untyped).returns(::User) }
+    def create_creator(*args, &blk); end
+
+    sig { params(args: T.untyped, blk: T.untyped).returns(::User) }
+    def create_creator!(*args, &blk); end
 
     sig { params(args: T.untyped, blk: T.untyped).returns(::Blazer::Query) }
     def create_query(*args, &blk); end
@@ -274,11 +283,20 @@ class Blazer::Check
     sig { params(args: T.untyped, blk: T.untyped).returns(::Blazer::Query) }
     def create_query!(*args, &blk); end
 
+    sig { returns(T.nilable(::User)) }
+    def creator; end
+
+    sig { params(value: T.nilable(::User)).void }
+    def creator=(value); end
+
     sig { returns(T.nilable(::Blazer::Query)) }
     def query; end
 
     sig { params(value: T.nilable(::Blazer::Query)).void }
     def query=(value); end
+
+    sig { returns(T.nilable(::User)) }
+    def reload_creator; end
 
     sig { returns(T.nilable(::Blazer::Query)) }
     def reload_query; end

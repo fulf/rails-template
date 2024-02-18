@@ -268,11 +268,20 @@ class Blazer::Audit
     sig { params(args: T.untyped, blk: T.untyped).returns(::Blazer::Query) }
     def build_query(*args, &blk); end
 
+    sig { params(args: T.untyped, blk: T.untyped).returns(::User) }
+    def build_user(*args, &blk); end
+
     sig { params(args: T.untyped, blk: T.untyped).returns(::Blazer::Query) }
     def create_query(*args, &blk); end
 
     sig { params(args: T.untyped, blk: T.untyped).returns(::Blazer::Query) }
     def create_query!(*args, &blk); end
+
+    sig { params(args: T.untyped, blk: T.untyped).returns(::User) }
+    def create_user(*args, &blk); end
+
+    sig { params(args: T.untyped, blk: T.untyped).returns(::User) }
+    def create_user!(*args, &blk); end
 
     sig { returns(T.nilable(::Blazer::Query)) }
     def query; end
@@ -282,6 +291,15 @@ class Blazer::Audit
 
     sig { returns(T.nilable(::Blazer::Query)) }
     def reload_query; end
+
+    sig { returns(T.nilable(::User)) }
+    def reload_user; end
+
+    sig { returns(T.nilable(::User)) }
+    def user; end
+
+    sig { params(value: T.nilable(::User)).void }
+    def user=(value); end
   end
 
   module GeneratedAssociationRelationMethods

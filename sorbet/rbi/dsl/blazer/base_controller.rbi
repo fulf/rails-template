@@ -29,6 +29,12 @@ class Blazer::BaseController
     sig { returns(T.untyped) }
     def cookies; end
 
+    sig { returns(T.untyped) }
+    def current_user; end
+
+    sig { returns(T.untyped) }
+    def devise_controller?; end
+
     sig { params(form_options: T.untyped).returns(T.untyped) }
     def form_authenticity_token(form_options: T.unsafe(nil)); end
 
@@ -41,6 +47,9 @@ class Blazer::BaseController
     sig { returns(T.untyped) }
     def protect_against_forgery?; end
 
+    sig { params(scope: T.untyped).returns(T.untyped) }
+    def signed_in?(scope = T.unsafe(nil)); end
+
     sig { returns(T.untyped) }
     def true_user; end
 
@@ -50,11 +59,20 @@ class Blazer::BaseController
     sig { returns(T.untyped) }
     def turbo_native_app?; end
 
+    sig { returns(T.untyped) }
+    def user_session; end
+
+    sig { returns(T.untyped) }
+    def user_signed_in?; end
+
     sig { params(resource: T.untyped, var_params: T.untyped).returns(T.untyped) }
     def variable_params(resource, var_params = T.unsafe(nil)); end
 
     sig { returns(T.untyped) }
     def view_cache_dependencies; end
+
+    sig { returns(T.untyped) }
+    def warden; end
   end
 
   class HelperProxy < ::ActionView::Base

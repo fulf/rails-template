@@ -27,6 +27,7 @@ class ApplicationController
     include ::Ransack::Helpers::FormHelper
     include ::ActionController::Base::HelperMethods
     include ::ApplicationHelper
+    include ::DeviseHelper
 
     sig { returns(T.untyped) }
     def true_user; end

@@ -265,6 +265,21 @@ class Blazer::Dashboard
   end
 
   module GeneratedAssociationMethods
+    sig { params(args: T.untyped, blk: T.untyped).returns(::User) }
+    def build_creator(*args, &blk); end
+
+    sig { params(args: T.untyped, blk: T.untyped).returns(::User) }
+    def create_creator(*args, &blk); end
+
+    sig { params(args: T.untyped, blk: T.untyped).returns(::User) }
+    def create_creator!(*args, &blk); end
+
+    sig { returns(T.nilable(::User)) }
+    def creator; end
+
+    sig { params(value: T.nilable(::User)).void }
+    def creator=(value); end
+
     # This method is created by ActiveRecord on the `Blazer::Dashboard` class because it declared `has_many :dashboard_queries`.
     # 🔗 [Rails guide for `has_many` association](https://guides.rubyonrails.org/association_basics.html#the-has-many-association)
     sig { returns(::Blazer::DashboardQuery::PrivateCollectionProxy) }
@@ -292,6 +307,9 @@ class Blazer::Dashboard
 
     sig { params(ids: T::Array[T.untyped]).returns(T::Array[T.untyped]) }
     def query_ids=(ids); end
+
+    sig { returns(T.nilable(::User)) }
+    def reload_creator; end
   end
 
   module GeneratedAssociationRelationMethods
