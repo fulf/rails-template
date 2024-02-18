@@ -74,6 +74,8 @@ gem 'pghero'
 
 gem 'pretender'
 
+gem 'sidekiq'
+
 group :development, :test do
   gem 'bullet'
 
