@@ -27,6 +27,9 @@ module GeneratedUrlHelpersModule
   def edit_user_registration_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
+  def field_test_engine_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
   def mailkick_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }

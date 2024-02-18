@@ -520,6 +520,8 @@ class ActionMailer::Base < ::AbstractController::Base
   include ::AbstractController::Caching
   include ::ActionView::Rendering
   include ::ActionView::Layouts
+  include ::FieldTest::Helpers
+  include ::FieldTest::Mailer
   extend ::ActionMailer::Callbacks::ClassMethods
   extend ::ActiveSupport::Callbacks::ClassMethods
   extend ::ActionMailer::DeliveryMethods::ClassMethods
@@ -1431,6 +1433,15 @@ module ActionMailer::Base::HelperMethods
 
   # source://actionpack/7.1.3.2/lib/abstract_controller/caching/fragments.rb#33
   def combined_fragment_cache_key(*args, **_arg1, &block); end
+
+  # source://field_test/0.6.0/lib/field_test/mailer.rb#7
+  def field_test(*args, **_arg1, &block); end
+
+  # source://field_test/0.6.0/lib/field_test/mailer.rb#8
+  def field_test_converted(*args, **_arg1, &block); end
+
+  # source://field_test/0.6.0/lib/field_test/mailer.rb#9
+  def field_test_experiments(*args, **_arg1, &block); end
 
   # source://actionpack/7.1.3.2/lib/abstract_controller/caching.rb#43
   def view_cache_dependencies(*args, **_arg1, &block); end

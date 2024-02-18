@@ -903,6 +903,40 @@ ALTER SEQUENCE public.blazer_queries_id_seq OWNED BY public.blazer_queries.id;
 
 
 --
+-- Name: field_test_memberships; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.field_test_memberships (
+    id bigint NOT NULL,
+    participant_type character varying,
+    participant_id character varying,
+    experiment character varying,
+    variant character varying,
+    created_at timestamp(6) without time zone,
+    converted boolean DEFAULT false NOT NULL
+);
+
+
+--
+-- Name: field_test_memberships_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.field_test_memberships_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: field_test_memberships_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.field_test_memberships_id_seq OWNED BY public.field_test_memberships.id;
+
+
+--
 -- Name: friendly_id_slugs; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -1315,6 +1349,13 @@ ALTER TABLE ONLY public.blazer_queries ALTER COLUMN id SET DEFAULT nextval('publ
 
 
 --
+-- Name: field_test_memberships id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.field_test_memberships ALTER COLUMN id SET DEFAULT nextval('public.field_test_memberships_id_seq'::regclass);
+
+
+--
 -- Name: friendly_id_slugs id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -1439,6 +1480,14 @@ ALTER TABLE ONLY public.blazer_dashboards
 
 ALTER TABLE ONLY public.blazer_queries
     ADD CONSTRAINT blazer_queries_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: field_test_memberships field_test_memberships_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.field_test_memberships
+    ADD CONSTRAINT field_test_memberships_pkey PRIMARY KEY (id);
 
 
 --
@@ -1634,6 +1683,20 @@ CREATE INDEX index_blazer_queries_on_creator_id ON public.blazer_queries USING b
 
 
 --
+-- Name: index_field_test_memberships_on_experiment_and_created_at; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_field_test_memberships_on_experiment_and_created_at ON public.field_test_memberships USING btree (experiment, created_at);
+
+
+--
+-- Name: index_field_test_memberships_on_participant; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE UNIQUE INDEX index_field_test_memberships_on_participant ON public.field_test_memberships USING btree (participant_type, participant_id, experiment);
+
+
+--
 -- Name: index_friendly_id_slugs_on_slug_and_sluggable_type; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -1766,6 +1829,7 @@ CREATE TRIGGER logidze_on_users BEFORE INSERT OR UPDATE ON public.users FOR EACH
 SET search_path TO "$user", public;
 
 INSERT INTO "schema_migrations" (version) VALUES
+('20240218024121'),
 ('20240218023609'),
 ('20240218022607'),
 ('20240218021133'),

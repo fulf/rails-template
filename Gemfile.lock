@@ -105,6 +105,7 @@ GEM
       msgpack (~> 1.2)
     brakeman (6.1.2)
       racc
+    browser (5.3.1)
     builder (3.2.4)
     bullet (7.1.6)
       activesupport (>= 3.0.0)
@@ -187,6 +188,11 @@ GEM
     faker (3.2.3)
       i18n (>= 1.8.11, < 2)
     ffi (1.16.3)
+    field_test (0.6.0)
+      activerecord (>= 6.1)
+      browser (>= 2)
+      railties (>= 6.1)
+      rice (>= 4.0.2)
     friendly_id (5.5.1)
       activerecord (>= 4.0.0)
     globalid (1.2.1)
@@ -375,6 +381,7 @@ GEM
       actionpack (>= 5.2)
       railties (>= 5.2)
     rexml (3.2.6)
+    rice (4.2.1)
     rolify (6.0.1)
     rover-df (0.3.4)
       numo-narray (>= 0.9.1.9)
@@ -544,6 +551,7 @@ DEPENDENCIES
   dotenv-rails
   factory_bot_rails
   faker
+  field_test
   friendly_id
   groupdate
   hotwire-livereload (~> 1.3)

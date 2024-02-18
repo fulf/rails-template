@@ -20,6 +20,9 @@ class Blazer::BaseController
     sig { returns(T.untyped) }
     def blazer_user; end
 
+    sig { returns(T.untyped) }
+    def browser; end
+
     sig { params(key: T.untyped).returns(T.untyped) }
     def combined_fragment_cache_key(key); end
 
@@ -40,6 +43,15 @@ class Blazer::BaseController
 
     sig { returns(T.untyped) }
     def devise_controller?; end
+
+    sig { params(experiment: T.untyped, options: T.untyped).returns(T.untyped) }
+    def field_test(experiment, **options); end
+
+    sig { params(experiment: T.untyped, options: T.untyped).returns(T.untyped) }
+    def field_test_converted(experiment, **options); end
+
+    sig { params(options: T.untyped).returns(T.untyped) }
+    def field_test_experiments(**options); end
 
     sig { params(form_options: T.untyped).returns(T.untyped) }
     def form_authenticity_token(form_options: T.unsafe(nil)); end

@@ -27,6 +27,9 @@ module GeneratedPathHelpersModule
   def edit_user_registration_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }
+  def field_test_engine_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
   def mailkick_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }

@@ -14,6 +14,7 @@ Rails.application.routes.draw do
       mount PgHero::Engine, at: 'pghero'
       mount Sidekiq::Web, at: 'sidekiq'
       mount Blazer::Engine, at: 'blazer'
+      mount FieldTest::Engine, at: 'field_test'
     end
   end
 

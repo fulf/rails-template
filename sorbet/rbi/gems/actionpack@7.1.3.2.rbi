@@ -1276,6 +1276,8 @@ class ActionController::API < ::ActionController::Metal
   include ::Notable::UnverifiedRequest
   include ::ActionController::RespondWith
   include ::Ahoy::Controller
+  include ::FieldTest::Helpers
+  include ::FieldTest::Controller
   include ::Devise::Controllers::SignInOut
   include ::Devise::Controllers::StoreLocation
   include ::Devise::Controllers::Helpers
@@ -1754,6 +1756,8 @@ class ActionController::Base < ::ActionController::Metal
   include ::Notable::UnverifiedRequest
   include ::ActionController::RespondWith
   include ::Ahoy::Controller
+  include ::FieldTest::Helpers
+  include ::FieldTest::Controller
   include ::Devise::Controllers::SignInOut
   include ::Devise::Controllers::StoreLocation
   include ::Devise::Controllers::Helpers
@@ -2413,6 +2417,15 @@ module ActionController::Base::HelperMethods
 
   # source://devise/4.9.3/lib/devise/controllers/helpers.rb#13
   def devise_controller?(*args, **_arg1, &block); end
+
+  # source://field_test/0.6.0/lib/field_test/controller.rb#8
+  def field_test(*args, **_arg1, &block); end
+
+  # source://field_test/0.6.0/lib/field_test/controller.rb#9
+  def field_test_converted(*args, **_arg1, &block); end
+
+  # source://field_test/0.6.0/lib/field_test/controller.rb#10
+  def field_test_experiments(*args, **_arg1, &block); end
 
   # source://actionpack//lib/action_controller/metal/request_forgery_protection.rb#101
   def form_authenticity_token(*args, **_arg1, &block); end
