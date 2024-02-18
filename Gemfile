@@ -76,6 +76,9 @@ gem 'pretender'
 
 gem 'sidekiq'
 
+gem 'blazer'
+gem 'prophet-rb'
+
 group :development, :test do
   gem 'bullet'
 
