@@ -1425,6 +1425,7 @@ end
 # source://actionmailer//lib/action_mailer/base.rb#0
 module ActionMailer::Base::HelperMethods
   include ::ActionMailer::MailHelper
+  include ::Mailkick::UrlHelper
   include ::ActionText::ContentHelper
   include ::ActionText::TagHelper
 

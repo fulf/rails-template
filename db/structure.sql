@@ -893,6 +893,39 @@ ALTER SEQUENCE public.login_activities_id_seq OWNED BY public.login_activities.i
 
 
 --
+-- Name: mailkick_subscriptions; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.mailkick_subscriptions (
+    id bigint NOT NULL,
+    subscriber_type character varying,
+    subscriber_id bigint,
+    list character varying,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL
+);
+
+
+--
+-- Name: mailkick_subscriptions_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.mailkick_subscriptions_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: mailkick_subscriptions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.mailkick_subscriptions_id_seq OWNED BY public.mailkick_subscriptions.id;
+
+
+--
 -- Name: notable_jobs; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -1192,6 +1225,13 @@ ALTER TABLE ONLY public.login_activities ALTER COLUMN id SET DEFAULT nextval('pu
 
 
 --
+-- Name: mailkick_subscriptions id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.mailkick_subscriptions ALTER COLUMN id SET DEFAULT nextval('public.mailkick_subscriptions_id_seq'::regclass);
+
+
+--
 -- Name: notable_jobs id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -1298,6 +1338,14 @@ ALTER TABLE ONLY public.login_activities
 
 
 --
+-- Name: mailkick_subscriptions mailkick_subscriptions_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.mailkick_subscriptions
+    ADD CONSTRAINT mailkick_subscriptions_pkey PRIMARY KEY (id);
+
+
+--
 -- Name: notable_jobs notable_jobs_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -1351,6 +1399,13 @@ ALTER TABLE ONLY public.schema_migrations
 
 ALTER TABLE ONLY public.users
     ADD CONSTRAINT users_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: idx_on_subscriber_type_subscriber_id_list_e1dc9985f4; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE UNIQUE INDEX idx_on_subscriber_type_subscriber_id_list_e1dc9985f4 ON public.mailkick_subscriptions USING btree (subscriber_type, subscriber_id, list);
 
 
 --
@@ -1543,6 +1598,7 @@ SET search_path TO "$user", public;
 
 INSERT INTO "schema_migrations" (version) VALUES
 ('20240218022607'),
+('20240218021133'),
 ('20240218020604'),
 ('20240218015933'),
 ('20240218015932'),

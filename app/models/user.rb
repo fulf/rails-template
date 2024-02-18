@@ -4,6 +4,7 @@
 class User < ApplicationRecord
   extend T::Sig
 
+  has_subscriptions
   has_logidze
   rolify
   # Include default devise modules. Others available are:

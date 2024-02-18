@@ -93,6 +93,8 @@ gem 'rolify'
 
 gem 'logidze'
 
+gem 'mailkick'
+
 group :development, :test do
   gem 'bullet'
 
