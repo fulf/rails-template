@@ -5584,8 +5584,14 @@ class Rails::Rack::Logger < ::ActiveSupport::LogSubscriber
   # source://railties//lib/rails/rack/logger.rb#15
   def initialize(app, taggers = T.unsafe(nil)); end
 
-  # source://railties//lib/rails/rack/logger.rb#20
+  # source://ahoy_matey/5.0.2/lib/ahoy/engine.rb#16
   def call(env); end
+
+  # source://ahoy_matey/5.0.2/lib/ahoy/engine.rb#16
+  def call_with_quiet_ahoy(env); end
+
+  # source://railties//lib/rails/rack/logger.rb#20
+  def call_without_quiet_ahoy(env); end
 
   private
 

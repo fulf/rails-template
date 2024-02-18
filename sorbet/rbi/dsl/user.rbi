@@ -253,6 +253,20 @@ class User
 
     sig { params(value: T::Enumerable[::Role]).void }
     def roles=(value); end
+
+    sig { returns(T::Array[T.untyped]) }
+    def visit_ids; end
+
+    sig { params(ids: T::Array[T.untyped]).returns(T::Array[T.untyped]) }
+    def visit_ids=(ids); end
+
+    # This method is created by ActiveRecord on the `User` class because it declared `has_many :visits`.
+    # 🔗 [Rails guide for `has_many` association](https://guides.rubyonrails.org/association_basics.html#the-has-many-association)
+    sig { returns(::Ahoy::Visit::PrivateCollectionProxy) }
+    def visits; end
+
+    sig { params(value: T::Enumerable[::Ahoy::Visit]).void }
+    def visits=(value); end
   end
 
   module GeneratedAssociationRelationMethods

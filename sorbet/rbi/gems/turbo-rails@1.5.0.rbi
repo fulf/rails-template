@@ -597,6 +597,9 @@ module ActionController::Base::HelperMethods
   include ::ActionView::Helpers::TagHelper
   include ::Turbo::Streams::ActionHelper
 
+  # source://ahoy_matey/5.0.2/lib/ahoy/controller.rb#6
+  def ahoy(*args, **_arg1, &block); end
+
   # source://actionpack/7.1.3.2/lib/action_controller/metal/flash.rb#39
   def alert(*args, **_arg1, &block); end
 
@@ -611,6 +614,9 @@ module ActionController::Base::HelperMethods
 
   # source://actionpack/7.1.3.2/lib/action_controller/metal/cookies.rb#8
   def cookies(*args, **_arg1, &block); end
+
+  # source://ahoy_matey/5.0.2/lib/ahoy/controller.rb#5
+  def current_visit(*args, **_arg1, &block); end
 
   # source://devise/4.9.3/lib/devise/controllers/helpers.rb#13
   def devise_controller?(*args, **_arg1, &block); end

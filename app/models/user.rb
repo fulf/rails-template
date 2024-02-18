@@ -15,6 +15,8 @@ class User < ApplicationRecord
          timeout_in: 30.minutes,
          lock_strategy: :failed_attempts, maximum_attempts: 5, unlock_strategy: :time, unlock_in: 1.hour
 
+  has_many :visits, class_name: 'Ahoy::Visit', dependent: nil
+
   sig { returns(T::Boolean) }
   def admin?
     has_role?(Role::ADMIN)

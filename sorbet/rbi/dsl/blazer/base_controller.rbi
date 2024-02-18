@@ -12,6 +12,9 @@ class Blazer::BaseController
     include ::Blazer::BaseHelper
 
     sig { returns(T.untyped) }
+    def ahoy; end
+
+    sig { returns(T.untyped) }
     def alert; end
 
     sig { returns(T.untyped) }
@@ -31,6 +34,9 @@ class Blazer::BaseController
 
     sig { returns(T.untyped) }
     def current_user; end
+
+    sig { returns(T.untyped) }
+    def current_visit; end
 
     sig { returns(T.untyped) }
     def devise_controller?; end

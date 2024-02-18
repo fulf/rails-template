@@ -79,6 +79,10 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.6)
       public_suffix (>= 2.0.2, < 6.0)
+    ahoy_matey (5.0.2)
+      activesupport (>= 6.1)
+      device_detector (>= 1)
+      safely_block (>= 0.4)
     argon2-kdf (0.2.0)
     ast (2.4.2)
     authtrail (0.5.0)
@@ -132,6 +136,7 @@ GEM
     debug (1.9.1)
       irb (~> 1.10)
       reline (>= 0.3.8)
+    device_detector (1.1.2)
     devise (4.9.3)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -523,6 +528,7 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord-import
+  ahoy_matey
   authtrail
   blazer
   blind_index

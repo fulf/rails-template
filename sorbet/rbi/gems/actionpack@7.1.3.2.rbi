@@ -1275,6 +1275,7 @@ class ActionController::API < ::ActionController::Metal
   include ::ActionController::ParamsWrapper
   include ::Notable::UnverifiedRequest
   include ::ActionController::RespondWith
+  include ::Ahoy::Controller
   include ::Devise::Controllers::SignInOut
   include ::Devise::Controllers::StoreLocation
   include ::Devise::Controllers::Helpers
@@ -1752,6 +1753,7 @@ class ActionController::Base < ::ActionController::Metal
   include ::Turbo::Streams::TurboStreamsTagBuilder
   include ::Notable::UnverifiedRequest
   include ::ActionController::RespondWith
+  include ::Ahoy::Controller
   include ::Devise::Controllers::SignInOut
   include ::Devise::Controllers::StoreLocation
   include ::Devise::Controllers::Helpers
@@ -2388,6 +2390,9 @@ module ActionController::Base::HelperMethods
   include ::Hotwire::Livereload::LivereloadTagsHelper
   include ::Ransack::Helpers::FormHelper
 
+  # source://ahoy_matey/5.0.2/lib/ahoy/controller.rb#6
+  def ahoy(*args, **_arg1, &block); end
+
   # source://actionpack//lib/action_controller/metal/flash.rb#39
   def alert(*args, **_arg1, &block); end
 
@@ -2402,6 +2407,9 @@ module ActionController::Base::HelperMethods
 
   # source://actionpack//lib/action_controller/metal/cookies.rb#8
   def cookies(*args, **_arg1, &block); end
+
+  # source://ahoy_matey/5.0.2/lib/ahoy/controller.rb#5
+  def current_visit(*args, **_arg1, &block); end
 
   # source://devise/4.9.3/lib/devise/controllers/helpers.rb#13
   def devise_controller?(*args, **_arg1, &block); end

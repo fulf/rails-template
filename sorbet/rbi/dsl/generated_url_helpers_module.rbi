@@ -9,6 +9,9 @@ module GeneratedUrlHelpersModule
   include ::ActionDispatch::Routing::PolymorphicRoutes
 
   sig { params(args: T.untyped).returns(String) }
+  def ahoy_engine_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
   def blazer_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }

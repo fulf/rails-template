@@ -95,6 +95,8 @@ gem 'logidze'
 
 gem 'mailkick'
 
+gem 'ahoy_matey'
+
 group :development, :test do
   gem 'bullet'
 

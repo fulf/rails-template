@@ -943,6 +943,7 @@ class ActionView::Base
   include ::ActionView::Helpers::RenderingHelper
   include ::ActionView::Helpers
   include ::Chartkick::Helper
+  include ::Ahoy::Helper
   include ::ActionCable::Helpers::ActionCableHelper
   include ::Devise::Controllers::UrlHelpers
   extend ::ActionView::Helpers::UrlHelper::ClassMethods
