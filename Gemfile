@@ -72,6 +72,8 @@ gem 'data_migrate'
 
 gem 'pghero'
 
+gem 'pretender'
+
 group :development, :test do
   gem 'bullet'
 

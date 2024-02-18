@@ -2,4 +2,5 @@
 
 class ApplicationController < ActionController::Base
   include Pagy::Backend
+  impersonates :user
 end
