@@ -248,6 +248,8 @@ GEM
       ast (~> 2.4.1)
       racc
     pg (1.5.4)
+    pghero (3.4.1)
+      activerecord (>= 6)
     psych (5.1.2)
       stringio
     public_suffix (5.0.4)
@@ -429,6 +431,7 @@ DEPENDENCIES
   overcommit
   pagy
   pg
+  pghero
   puma (>= 5.0)
   rack-attack
   rack-mini-profiler

@@ -70,6 +70,8 @@ gem 'pagy'
 
 gem 'data_migrate'
 
+gem 'pghero'
+
 group :development, :test do
   gem 'bullet'
 
