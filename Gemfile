@@ -85,6 +85,7 @@ gem 'rswag-ui'
 gem 'sorbet-runtime'
 
 gem 'devise'
+gem 'rolify'
 
 group :development, :test do
   gem 'bullet'

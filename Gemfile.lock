@@ -355,6 +355,7 @@ GEM
       actionpack (>= 5.2)
       railties (>= 5.2)
     rexml (3.2.6)
+    rolify (6.0.1)
     rover-df (0.3.4)
       numo-narray (>= 0.9.1.9)
     rspec-core (3.13.0)
@@ -543,6 +544,7 @@ DEPENDENCIES
   ransack
   redis (>= 4.0.1)
   reek
+  rolify
   rspec-github
   rspec-rails
   rswag-api

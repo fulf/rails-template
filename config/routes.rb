@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   mount Rswag::Api::Engine => '/api-docs'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  authenticate :user do
+  authenticate :user, ->(user) { user.admin? } do
     scope '/admin' do
       mount PgHero::Engine, at: 'pghero'
       mount Sidekiq::Web, at: 'sidekiq'
