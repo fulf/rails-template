@@ -79,6 +79,9 @@ gem 'sidekiq'
 gem 'blazer'
 gem 'prophet-rb'
 
+gem 'rswag-api'
+gem 'rswag-ui'
+
 group :development, :test do
   gem 'bullet'
 
@@ -90,6 +93,8 @@ group :development, :test do
   gem 'dotenv-rails'
 
   gem 'rspec-rails'
+
+  gem 'rswag-specs'
 end
 
 group :development do
