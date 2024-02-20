@@ -100,6 +100,8 @@ gem 'field_test'
 
 gem 'draper'
 
+gem 'aasm'
+
 group :development, :test do
   gem 'bullet'
 
