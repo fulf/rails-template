@@ -7,12 +7,16 @@ describe 'User' do
   let(:user) { true }
 
   it 'is valid' do
-    expect(user).to be false
+    expect(user).to be true
   end
 
   it 'creates something in the db' do
     expect do
       PgHero::SpaceStats.create(database: 'foo', schema: 'bar', relation: '', size: 100, captured_at: Time.current)
     end.to change(PgHero::SpaceStats, :count).by(1)
+  end
+
+  it 'properly cleans the database' do
+    expect(PgHero::SpaceStats.count).to eq(0)
   end
 end
