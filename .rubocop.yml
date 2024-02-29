@@ -4,9 +4,17 @@ require:
   - rubocop-rspec
   - rubocop-capybara
   - rubocop-factory_bot
+  - rubocop-sorbet
+
+inherit_mode:
+  merge:
+    - Include
 
 AllCops:
   NewCops: enable
+  Include:
+    - "sorbet/rbi/shims/**/*.rbi"
+
 Gemspec/DeprecatedAttributeAssignment: # new in 1.30
   Enabled: true
 Gemspec/DevelopmentDependencies: # new in 1.44

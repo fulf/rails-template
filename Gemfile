@@ -82,6 +82,8 @@ gem 'prophet-rb'
 gem 'rswag-api'
 gem 'rswag-ui'
 
+gem 'sorbet-runtime'
+
 group :development, :test do
   gem 'bullet'
 
@@ -95,6 +97,8 @@ group :development, :test do
   gem 'rspec-rails'
 
   gem 'rswag-specs'
+
+  gem 'tapioca', require: false
 end
 
 group :development do
@@ -106,11 +110,13 @@ group :development do
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
   gem 'rubocop-rspec', require: false
+  gem 'rubocop-sorbet', require: false
 
   gem 'brakeman'
   gem 'bundler-audit'
   gem 'overcommit'
   gem 'reek'
+  gem 'sorbet'
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   gem 'memory_profiler'

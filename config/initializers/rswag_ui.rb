@@ -1,3 +1,4 @@
+# typed: false
 # frozen_string_literal: true
 
 Rswag::Ui.configure do |c|
