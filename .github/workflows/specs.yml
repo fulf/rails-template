@@ -19,4 +19,4 @@ jobs:
           bundler-cache: true
       - name: Run RSpec
         run: |
-          bundle exec rspec
+          bundle exec rspec --format RSpec::Github::Formatter
