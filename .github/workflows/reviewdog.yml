@@ -52,7 +52,7 @@ jobs:
         with:
           reek_version: gemfile
   rubocop:
-    name: runner / reek
+    name: runner / rubocop
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
