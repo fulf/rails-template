@@ -2,6 +2,9 @@ detectors:
   IrresponsibleModule:
     enabled: false
 
+exclude_paths:
+  - vendor
+
 directories:
   "app/controllers":
     NestedIterators:

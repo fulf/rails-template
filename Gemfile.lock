@@ -356,6 +356,8 @@ GEM
     rspec-expectations (3.13.0)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
+    rspec-github (2.4.0)
+      rspec-core (~> 3.0)
     rspec-mocks (3.13.0)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
@@ -427,7 +429,9 @@ GEM
     sorbet (0.5.11276)
       sorbet-static (= 0.5.11276)
     sorbet-runtime (0.5.11276)
+    sorbet-static (0.5.11276-aarch64-linux)
     sorbet-static (0.5.11276-universal-darwin)
+    sorbet-static (0.5.11276-x86_64-linux)
     sorbet-static-and-runtime (0.5.11276)
       sorbet (= 0.5.11276)
       sorbet-runtime (= 0.5.11276)
@@ -533,6 +537,7 @@ DEPENDENCIES
   ransack
   redis (>= 4.0.1)
   reek
+  rspec-github
   rspec-rails
   rswag-api
   rswag-specs
