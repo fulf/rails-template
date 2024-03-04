@@ -117,7 +117,7 @@ GEM
     connection_pool (2.4.1)
     crass (1.0.6)
     csv (3.2.8)
-    data_migrate (9.2.0)
+    data_migrate (9.3.0)
       activerecord (>= 6.1)
       railties (>= 6.1)
     date (3.3.4)
@@ -131,8 +131,7 @@ GEM
     dotenv-rails (3.0.2)
       dotenv (= 3.0.2)
       railties (>= 6.1)
-    drb (2.2.0)
-      ruby2_keywords
+    drb (2.2.1)
     dry-configurable (1.1.0)
       dry-core (~> 1.0, < 2)
       zeitwerk (~> 2.6)
@@ -237,11 +236,7 @@ GEM
     nio4r (2.7.0)
     nokogiri (1.16.2-aarch64-linux)
       racc (~> 1.4)
-    nokogiri (1.16.2-arm-linux)
-      racc (~> 1.4)
     nokogiri (1.16.2-arm64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.16.2-x86-linux)
       racc (~> 1.4)
     nokogiri (1.16.2-x86_64-darwin)
       racc (~> 1.4)
@@ -413,7 +408,6 @@ GEM
     rubocop-sorbet (0.7.7)
       rubocop (>= 0.90.0)
     ruby-progressbar (1.13.0)
-    ruby2_keywords (0.0.5)
     rubyzip (2.3.2)
     safely_block (0.4.0)
     selenium-webdriver (4.17.0)
@@ -494,9 +488,7 @@ GEM
 
 PLATFORMS
   aarch64-linux
-  arm-linux
   arm64-darwin
-  x86-linux
   x86_64-darwin
   x86_64-linux
 
