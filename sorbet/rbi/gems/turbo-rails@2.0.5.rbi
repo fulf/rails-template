@@ -594,17 +594,29 @@ end
 module Turbo
   extend ::ActiveSupport::Autoload
 
-  # source://turbo-rails//lib/turbo-rails.rb#6
+  # source://activesupport/7.1.3.2/lib/active_support/core_ext/module/attribute_accessors_per_thread.rb#74
+  def current_request_id; end
+
+  # source://activesupport/7.1.3.2/lib/active_support/core_ext/module/attribute_accessors_per_thread.rb#116
+  def current_request_id=(obj); end
+
+  # source://turbo-rails//lib/turbo-rails.rb#7
   def draw_routes; end
 
-  # source://turbo-rails//lib/turbo-rails.rb#6
+  # source://turbo-rails//lib/turbo-rails.rb#7
   def draw_routes=(val); end
 
   class << self
-    # source://turbo-rails//lib/turbo-rails.rb#6
+    # source://activesupport/7.1.3.2/lib/active_support/core_ext/module/attribute_accessors_per_thread.rb#49
+    def current_request_id; end
+
+    # source://activesupport/7.1.3.2/lib/active_support/core_ext/module/attribute_accessors_per_thread.rb#108
+    def current_request_id=(obj); end
+
+    # source://turbo-rails//lib/turbo-rails.rb#7
     def draw_routes; end
 
-    # source://turbo-rails//lib/turbo-rails.rb#6
+    # source://turbo-rails//lib/turbo-rails.rb#7
     def draw_routes=(val); end
 
     # source://railties/7.1.3.2/lib/rails/engine.rb#412
@@ -616,17 +628,17 @@ module Turbo
     # source://railties/7.1.3.2/lib/rails/engine.rb#416
     def railtie_routes_url_helpers(include_path_helpers = T.unsafe(nil)); end
 
-    # source://turbo-rails//lib/turbo-rails.rb#11
+    # source://turbo-rails//lib/turbo-rails.rb#14
     def signed_stream_verifier; end
 
-    # source://turbo-rails//lib/turbo-rails.rb#15
+    # source://turbo-rails//lib/turbo-rails.rb#18
     def signed_stream_verifier_key; end
 
     # Sets the attribute signed_stream_verifier_key
     #
     # @param value the value to set the attribute signed_stream_verifier_key to.
     #
-    # source://turbo-rails//lib/turbo-rails.rb#9
+    # source://turbo-rails//lib/turbo-rails.rb#12
     def signed_stream_verifier_key=(_arg0); end
 
     # source://railties/7.1.3.2/lib/rails/engine.rb#401
@@ -634,6 +646,9 @@ module Turbo
 
     # source://railties/7.1.3.2/lib/rails/engine.rb#408
     def use_relative_model_naming?; end
+
+    # source://turbo-rails//lib/turbo-rails.rb#22
+    def with_request_id(request_id); end
   end
 end
 
@@ -642,10 +657,10 @@ module Turbo::Broadcastable
 
   mixes_in_class_methods ::Turbo::Broadcastable::ClassMethods
 
-  def broadcast_action(action, target: T.unsafe(nil), **rendering); end
-  def broadcast_action_later(action:, target: T.unsafe(nil), **rendering); end
-  def broadcast_action_later_to(*streamables, action:, target: T.unsafe(nil), **rendering); end
-  def broadcast_action_to(*streamables, action:, target: T.unsafe(nil), **rendering); end
+  def broadcast_action(action, target: T.unsafe(nil), attributes: T.unsafe(nil), **rendering); end
+  def broadcast_action_later(action:, target: T.unsafe(nil), attributes: T.unsafe(nil), **rendering); end
+  def broadcast_action_later_to(*streamables, action:, target: T.unsafe(nil), attributes: T.unsafe(nil), **rendering); end
+  def broadcast_action_to(*streamables, action:, target: T.unsafe(nil), attributes: T.unsafe(nil), **rendering); end
   def broadcast_after_to(*streamables, target:, **rendering); end
   def broadcast_append(target: T.unsafe(nil), **rendering); end
   def broadcast_append_later(target: T.unsafe(nil), **rendering); end
@@ -656,6 +671,10 @@ module Turbo::Broadcastable
   def broadcast_prepend_later(target: T.unsafe(nil), **rendering); end
   def broadcast_prepend_later_to(*streamables, target: T.unsafe(nil), **rendering); end
   def broadcast_prepend_to(*streamables, target: T.unsafe(nil), **rendering); end
+  def broadcast_refresh; end
+  def broadcast_refresh_later; end
+  def broadcast_refresh_later_to(*streamables); end
+  def broadcast_refresh_to(*streamables); end
   def broadcast_remove; end
   def broadcast_remove_to(*streamables, target: T.unsafe(nil)); end
   def broadcast_render(**rendering); end
@@ -680,7 +699,11 @@ end
 module Turbo::Broadcastable::ClassMethods
   def broadcast_target_default; end
   def broadcasts(stream = T.unsafe(nil), inserts_by: T.unsafe(nil), target: T.unsafe(nil), **rendering); end
+  def broadcasts_refreshes(stream = T.unsafe(nil)); end
+  def broadcasts_refreshes_to(stream); end
   def broadcasts_to(stream, inserts_by: T.unsafe(nil), target: T.unsafe(nil), **rendering); end
+  def suppressed_turbo_broadcasts?; end
+  def suppressing_turbo_broadcasts(&block); end
 end
 
 # source://turbo-rails//lib/turbo/broadcastable/test_helper.rb#3
@@ -691,7 +714,7 @@ module Turbo::Broadcastable::TestHelper
 
   # Asserts that no `<turbo-stream>` elements were broadcast over Action Cable
   #
-  # === Arguments
+  # ==== Arguments
   #
   # * <tt>stream_name_or_object</tt> the objects used to generate the
   #   channel Action Cable name, or the name itself
@@ -727,14 +750,14 @@ module Turbo::Broadcastable::TestHelper
 
   # Asserts that `<turbo-stream>` elements were broadcast over Action Cable
   #
-  # === Arguments
+  # ==== Arguments
   #
   # * <tt>stream_name_or_object</tt> the objects used to generate the
   #   channel Action Cable name, or the name itself
   # * <tt>&block</tt> optional block executed before the
   #   assertion
   #
-  # === Options
+  # ==== Options
   #
   # * <tt>count:</tt> the number of `<turbo-stream>` elements that are
   # expected to be broadcast
@@ -776,7 +799,7 @@ module Turbo::Broadcastable::TestHelper
 
   # Captures any `<turbo-stream>` elements that were broadcast over Action Cable
   #
-  # === Arguments
+  # ==== Arguments
   #
   # * <tt>stream_name_or_object</tt> the objects used to generate the
   #   channel Action Cable name, or the name itself
@@ -821,10 +844,31 @@ module Turbo::Broadcastable::TestHelper
   def capture_turbo_stream_broadcasts(stream_name_or_object, &block); end
 end
 
+class Turbo::Debouncer
+  def initialize(delay: T.unsafe(nil)); end
+
+  def debounce(&block); end
+  def delay; end
+  def scheduled_task; end
+  def wait; end
+
+  private
+
+  def wait_timeout; end
+end
+
+Turbo::Debouncer::DEFAULT_DELAY = T.let(T.unsafe(nil), Float)
+
 module Turbo::DriveHelper
   def turbo_exempts_page_from_cache; end
+  def turbo_exempts_page_from_cache_tag; end
   def turbo_exempts_page_from_preview; end
+  def turbo_exempts_page_from_preview_tag; end
   def turbo_page_requires_reload; end
+  def turbo_page_requires_reload_tag; end
+  def turbo_refresh_method_tag(method = T.unsafe(nil)); end
+  def turbo_refresh_scroll_tag(scroll = T.unsafe(nil)); end
+  def turbo_refreshes_with(method: T.unsafe(nil), scroll: T.unsafe(nil)); end
 end
 
 # source://turbo-rails//lib/turbo/engine.rb#4
@@ -900,10 +944,18 @@ class Turbo::Native::NavigationController < ::ActionController::Base
   end
 end
 
+module Turbo::RequestIdTracking
+  extend ::ActiveSupport::Concern
+
+  private
+
+  def turbo_tracking_request_id(&block); end
+end
+
 module Turbo::Streams; end
 
 class Turbo::Streams::ActionBroadcastJob < ::ActiveJob::Base
-  def perform(stream, action:, target:, **rendering); end
+  def perform(stream, action:, target:, attributes: T.unsafe(nil), **rendering); end
 
   class << self
     # source://activesupport/7.1.3.2/lib/active_support/rescuable.rb#15
@@ -917,6 +969,7 @@ module Turbo::Streams::ActionHelper
   include ::ActionView::Helpers::TagHelper
 
   def turbo_stream_action_tag(action, target: T.unsafe(nil), targets: T.unsafe(nil), template: T.unsafe(nil), **attributes); end
+  def turbo_stream_refresh_tag(request_id: T.unsafe(nil), **attributes); end
 
   private
 
@@ -932,14 +985,23 @@ class Turbo::Streams::BroadcastJob < ::ActiveJob::Base
   end
 end
 
+class Turbo::Streams::BroadcastStreamJob < ::ActiveJob::Base
+  def perform(stream, content:); end
+
+  class << self
+    # source://activesupport/7.1.3.2/lib/active_support/rescuable.rb#15
+    def rescue_handlers; end
+  end
+end
+
 module Turbo::Streams::Broadcasts
   include ::ActionView::Helpers::CaptureHelper
   include ::ActionView::Helpers::OutputSafetyHelper
   include ::ActionView::Helpers::TagHelper
   include ::Turbo::Streams::ActionHelper
 
-  def broadcast_action_later_to(*streamables, action:, target: T.unsafe(nil), targets: T.unsafe(nil), **rendering); end
-  def broadcast_action_to(*streamables, action:, target: T.unsafe(nil), targets: T.unsafe(nil), **rendering); end
+  def broadcast_action_later_to(*streamables, action:, target: T.unsafe(nil), targets: T.unsafe(nil), attributes: T.unsafe(nil), **rendering); end
+  def broadcast_action_to(*streamables, action:, target: T.unsafe(nil), targets: T.unsafe(nil), attributes: T.unsafe(nil), **rendering); end
   def broadcast_after_later_to(*streamables, **opts); end
   def broadcast_after_to(*streamables, **opts); end
   def broadcast_append_later_to(*streamables, **opts); end
@@ -948,6 +1010,8 @@ module Turbo::Streams::Broadcasts
   def broadcast_before_to(*streamables, **opts); end
   def broadcast_prepend_later_to(*streamables, **opts); end
   def broadcast_prepend_to(*streamables, **opts); end
+  def broadcast_refresh_later_to(*streamables, request_id: T.unsafe(nil), **opts); end
+  def broadcast_refresh_to(*streamables, **opts); end
   def broadcast_remove_to(*streamables, **opts); end
   def broadcast_render_later_to(*streamables, **rendering); end
   def broadcast_render_to(*streamables, **rendering); end
@@ -956,6 +1020,7 @@ module Turbo::Streams::Broadcasts
   def broadcast_stream_to(*streamables, content:); end
   def broadcast_update_later_to(*streamables, **opts); end
   def broadcast_update_to(*streamables, **opts); end
+  def refresh_debouncer_for(*streamables, request_id: T.unsafe(nil)); end
 
   private
 
@@ -1041,7 +1106,7 @@ module Turbo::TestAssertions
   # Assert that the rendered fragment of HTML does not contain a `<turbo-stream>`
   # element.
   #
-  # === Options
+  # ==== Options
   #
   # * <tt>:action</tt> [String] matches the element's <tt>[action]</tt>
   #   attribute
@@ -1065,7 +1130,7 @@ module Turbo::TestAssertions
   # Assert that the rendered fragment of HTML contains a `<turbo-stream>`
   # element.
   #
-  # === Options
+  # ==== Options
   #
   # * <tt>:action</tt> [String] matches the element's <tt>[action]</tt>
   #   attribute
@@ -1109,7 +1174,7 @@ module Turbo::TestAssertions::IntegrationTestAssertions
   # Assert that the Turbo Stream request's response body's HTML does not
   # contain a `<turbo-stream>` element.
   #
-  # === Options
+  # ==== Options
   #
   # * <tt>:status</tt> [Integer, Symbol] the HTTP response status
   # * <tt>:action</tt> [String] matches the element's <tt>[action]</tt>
@@ -1134,7 +1199,7 @@ module Turbo::TestAssertions::IntegrationTestAssertions
   # Assert that the Turbo Stream request's response body's HTML contains a
   # `<turbo-stream>` element.
   #
-  # === Options
+  # ==== Options
   #
   # * <tt>:status</tt> [Integer, Symbol] the HTTP response status
   # * <tt>:action</tt> [String] matches the element's <tt>[action]</tt>
@@ -1170,4 +1235,25 @@ module Turbo::TestAssertions::IntegrationTestAssertions
   #
   # source://turbo-rails//lib/turbo/test_assertions/integration_test_assertions.rb#41
   def assert_turbo_stream(status: T.unsafe(nil), **attributes, &block); end
+end
+
+class Turbo::ThreadDebouncer
+  def initialize(key, thread, delay:); end
+
+  def debounce; end
+  def wait(*_arg0, **_arg1, &_arg2); end
+
+  private
+
+  def debouncer; end
+  def key; end
+  def thread; end
+
+  class << self
+    def for(key, delay: T.unsafe(nil)); end
+
+    private
+
+    def new(*_arg0); end
+  end
 end

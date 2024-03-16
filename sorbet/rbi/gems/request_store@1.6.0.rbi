@@ -14,47 +14,50 @@
 # source://request_store//lib/request_store/version.rb#1
 module RequestStore
   class << self
-    # source://request_store//lib/request_store.rb#34
+    # source://request_store//lib/request_store.rb#44
     def [](key); end
 
-    # source://request_store//lib/request_store.rb#42
+    # source://request_store//lib/request_store.rb#52
     def []=(key, value); end
 
     # @return [Boolean]
     #
-    # source://request_store//lib/request_store.rb#26
+    # source://request_store//lib/request_store.rb#36
     def active?; end
 
-    # source://request_store//lib/request_store.rb#18
+    # source://request_store//lib/request_store.rb#28
     def begin!; end
 
-    # source://request_store//lib/request_store.rb#14
+    # source://request_store//lib/request_store.rb#24
     def clear!; end
 
-    # source://request_store//lib/request_store.rb#55
+    # source://request_store//lib/request_store.rb#65
     def delete(key, &block); end
 
-    # source://request_store//lib/request_store.rb#22
+    # source://request_store//lib/request_store.rb#32
     def end!; end
 
     # @return [Boolean]
     #
-    # source://request_store//lib/request_store.rb#46
+    # source://request_store//lib/request_store.rb#56
     def exist?(key); end
 
-    # source://request_store//lib/request_store.rb#50
+    # source://request_store//lib/request_store.rb#60
     def fetch(key); end
 
-    # source://request_store//lib/request_store.rb#30
+    # source://request_store//lib/request_store.rb#40
     def read(key); end
 
-    # source://request_store//lib/request_store.rb#6
+    # source://request_store//lib/request_store.rb#7
+    def scope; end
+
+    # source://request_store//lib/request_store.rb#16
     def store; end
 
-    # source://request_store//lib/request_store.rb#10
+    # source://request_store//lib/request_store.rb#20
     def store=(store); end
 
-    # source://request_store//lib/request_store.rb#38
+    # source://request_store//lib/request_store.rb#48
     def write(key, value); end
   end
 end

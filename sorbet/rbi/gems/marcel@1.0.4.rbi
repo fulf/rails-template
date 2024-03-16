@@ -210,13 +210,13 @@ class Marcel::MimeType
     # type with magic, but not the specific subclass. In this situation, if we can get a more
     # specific class using either the name or declared_type, we should use that in preference
     #
-    # source://marcel//lib/marcel/mime_type.rb#84
+    # source://marcel//lib/marcel/mime_type.rb#89
     def most_specific_type(*candidates); end
 
-    # source://marcel//lib/marcel/mime_type.rb#74
+    # source://marcel//lib/marcel/mime_type.rb#79
     def parse_media_type(content_type); end
 
-    # source://marcel//lib/marcel/mime_type.rb#66
+    # source://marcel//lib/marcel/mime_type.rb#71
     def with_io(pathname_or_io, &block); end
   end
 end

@@ -1257,6 +1257,8 @@ class ActiveRecord::Base
   # source://activerecord/7.1.3.2/lib/active_record/inheritance.rb#47
   def store_full_sti_class?; end
 
+  def suppressed_turbo_broadcasts?(&block); end
+
   # See ActiveRecord::ConnectionAdapters::AbstractAdapter.synchronize
   #
   # source://activerecord-import//lib/activerecord-import/synchronize.rb#64
@@ -2252,6 +2254,12 @@ class ActiveRecord::Base
     #
     # source://activerecord-import//lib/activerecord-import/import.rb#282
     def supports_setting_primary_key_of_imported_objects?; end
+
+    # source://activesupport/7.1.3.2/lib/active_support/core_ext/module/attribute_accessors_per_thread.rb#49
+    def suppressed_turbo_broadcasts; end
+
+    # source://activesupport/7.1.3.2/lib/active_support/core_ext/module/attribute_accessors_per_thread.rb#108
+    def suppressed_turbo_broadcasts=(obj); end
 
     # Synchronizes the passed in ActiveRecord instances with data
     # from the database. This is like calling reload on an individual
