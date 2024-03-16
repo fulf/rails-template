@@ -1068,7 +1068,7 @@ class JSON::Util::UUID < ::Struct
   def <=>(other); end
 
   # Two  UUIDs  are  said  to  be  equal if  and  only  if  their  (byte-order
-  # canonicalized) integer representations are equivallent.  Refer RFC4122 for
+  # canonicalized) integer representations are equivalent.  Refer RFC4122 for
   # details.
   #
   # source://json-schema//lib/json-schema/util/uuid.rb#265

@@ -299,20 +299,20 @@ Dotenv::Parser::LINE = T.let(T.unsafe(nil), Regexp)
 
 # Rails integration for using Dotenv to load ENV variables from a file
 #
-# source://dotenv//lib/dotenv/rails.rb#26
+# source://dotenv//lib/dotenv/rails.rb#25
 class Dotenv::Rails < ::Rails::Railtie
   # @return [Rails] a new instance of Rails
   #
-  # source://dotenv//lib/dotenv/rails.rb#29
+  # source://dotenv//lib/dotenv/rails.rb#28
   def initialize; end
 
-  # source://dotenv//lib/dotenv/rails.rb#27
+  # source://dotenv//lib/dotenv/rails.rb#26
   def autorestore(*_arg0, **_arg1, &_arg2); end
 
-  # source://dotenv//lib/dotenv/rails.rb#27
+  # source://dotenv//lib/dotenv/rails.rb#26
   def autorestore=(arg); end
 
-  # source://dotenv//lib/dotenv/rails.rb#81
+  # source://dotenv//lib/dotenv/rails.rb#86
   def deprecator; end
 
   # The current environment that the app is running in.
@@ -322,13 +322,13 @@ class Dotenv::Rails < ::Rails::Railtie
   #
   # See https://github.com/bkeepers/dotenv/issues/219
   #
-  # source://dotenv//lib/dotenv/rails.rb#71
+  # source://dotenv//lib/dotenv/rails.rb#76
   def env; end
 
-  # source://dotenv//lib/dotenv/rails.rb#27
+  # source://dotenv//lib/dotenv/rails.rb#26
   def files(*_arg0, **_arg1, &_arg2); end
 
-  # source://dotenv//lib/dotenv/rails.rb#27
+  # source://dotenv//lib/dotenv/rails.rb#26
   def files=(arg); end
 
   # Public: Load dotenv
@@ -336,67 +336,66 @@ class Dotenv::Rails < ::Rails::Railtie
   # This will get called during the `before_configuration` callback, but you
   # can manually call `Dotenv::Rails.load` if you needed it sooner.
   #
-  # source://dotenv//lib/dotenv/rails.rb#49
+  # source://dotenv//lib/dotenv/rails.rb#48
   def load; end
 
-  # source://dotenv//lib/dotenv/rails.rb#27
+  # source://dotenv//lib/dotenv/rails.rb#26
   def logger(*_arg0, **_arg1, &_arg2); end
 
-  # source://dotenv//lib/dotenv/rails.rb#27
-  def logger=(arg); end
+  # Set a new logger and replay logs
+  #
+  # source://dotenv//lib/dotenv/rails.rb#65
+  def logger=(new_logger); end
 
-  # source://dotenv//lib/dotenv/rails.rb#53
+  # source://dotenv//lib/dotenv/rails.rb#52
   def overload; end
 
-  # source://dotenv//lib/dotenv/rails.rb#27
+  # source://dotenv//lib/dotenv/rails.rb#26
   def overwrite(*_arg0, **_arg1, &_arg2); end
 
-  # source://dotenv//lib/dotenv/rails.rb#27
+  # source://dotenv//lib/dotenv/rails.rb#26
   def overwrite=(arg); end
 
   # Internal: `Rails.root` is nil in Rails 4.1 before the application is
   # initialized, so this falls back to the `RAILS_ROOT` environment variable,
   # or the current working directory.
   #
-  # source://dotenv//lib/dotenv/rails.rb#61
+  # source://dotenv//lib/dotenv/rails.rb#60
   def root; end
 
   class << self
     # Rails uses `#method_missing` to delegate all class methods to the
     # instance, which means `Kernel#load` gets called here. We don't want that.
     #
-    # source://dotenv//lib/dotenv/rails.rb#87
+    # source://dotenv//lib/dotenv/rails.rb#92
     def load; end
   end
 end
 
-# source://dotenv//lib/dotenv/rails.rb#79
+# source://dotenv//lib/dotenv/rails.rb#84
 Dotenv::Rails::TEST_RAKE_TASKS = T.let(T.unsafe(nil), Regexp)
 
-# source://dotenv//lib/dotenv/rails.rb#109
+# source://dotenv//lib/dotenv/rails.rb#113
 Dotenv::Railtie = Dotenv::Rails
 
 # A logger that can be used before the apps real logger is initialized.
 #
 # source://dotenv//lib/dotenv/replay_logger.rb#3
-class Dotenv::ReplayLogger
+class Dotenv::ReplayLogger < ::Logger
   # @return [ReplayLogger] a new instance of ReplayLogger
   #
   # source://dotenv//lib/dotenv/replay_logger.rb#4
   def initialize; end
 
-  # source://dotenv//lib/dotenv/replay_logger.rb#8
-  def method_missing(name, *args, &block); end
-
-  # source://dotenv//lib/dotenv/replay_logger.rb#16
-  def replay(logger); end
-
-  private
-
-  # @return [Boolean]
+  # Override the add method to store logs so we can replay them to a real logger later.
   #
-  # source://dotenv//lib/dotenv/replay_logger.rb#12
-  def respond_to_missing?(name, include_private = T.unsafe(nil)); end
+  # source://dotenv//lib/dotenv/replay_logger.rb#10
+  def add(*args, &block); end
+
+  # Replay the store logs to a real logger.
+  #
+  # source://dotenv//lib/dotenv/replay_logger.rb#15
+  def replay(logger); end
 end
 
 # An internal monitor to synchronize access to ENV in multi-threaded environments.

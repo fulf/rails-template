@@ -1278,6 +1278,7 @@ class ActionController::API < ::ActionController::Metal
   include ::Ahoy::Controller
   include ::FieldTest::Helpers
   include ::FieldTest::Controller
+  include ::Turbo::RequestIdTracking
   include ::Devise::Controllers::SignInOut
   include ::Devise::Controllers::StoreLocation
   include ::Devise::Controllers::Helpers
@@ -1758,6 +1759,7 @@ class ActionController::Base < ::ActionController::Metal
   include ::Ahoy::Controller
   include ::FieldTest::Helpers
   include ::FieldTest::Controller
+  include ::Turbo::RequestIdTracking
   include ::Devise::Controllers::SignInOut
   include ::Devise::Controllers::StoreLocation
   include ::Devise::Controllers::Helpers
@@ -6741,7 +6743,7 @@ module ActionController::Renderers
   # source://actionpack//lib/action_controller/metal/renderers.rb#155
   def _render_with_renderer_json(json, options); end
 
-  # source://turbo-rails/1.5.0/lib/turbo/engine.rb#61
+  # source://turbo-rails/2.0.5/lib/turbo/engine.rb#67
   def _render_with_renderer_turbo_stream(turbo_streams_html, options); end
 
   # source://actionpack//lib/action_controller/metal/renderers.rb#175
@@ -15350,7 +15352,7 @@ end
 
 # source://actionpack//lib/action_dispatch/testing/integration.rb#0
 class ActionDispatch::RequestEncoder::TurboStreamEncoder < ::ActionDispatch::RequestEncoder::IdentityEncoder
-  # source://turbo-rails/1.5.0/lib/turbo/engine.rb#96
+  # source://turbo-rails/2.0.5/lib/turbo/engine.rb#107
   def accept_header; end
 end
 

@@ -8107,10 +8107,10 @@ class RuboCop::Cop::Style::TrailingCommaInArguments < ::RuboCop::Cop::Base
   include ::RuboCop::Cop::ConfigurableEnforcedStyle
   include ::RuboCop::Cop::RangeHelp
 
-  # source://rubocop/1.62.0/lib/rubocop/cop/style/trailing_comma_in_arguments.rb#95
+  # source://rubocop/1.62.1/lib/rubocop/cop/style/trailing_comma_in_arguments.rb#95
   def on_csend(node); end
 
-  # source://rubocop/1.62.0/lib/rubocop/cop/style/trailing_comma_in_arguments.rb#95
+  # source://rubocop/1.62.1/lib/rubocop/cop/style/trailing_comma_in_arguments.rb#95
   def on_send(node); end
 
   class << self
