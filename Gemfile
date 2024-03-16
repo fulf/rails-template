@@ -98,6 +98,8 @@ gem 'mailkick'
 gem 'ahoy_matey'
 gem 'field_test'
 
+gem 'draper'
+
 group :development, :test do
   gem 'bullet'
 
