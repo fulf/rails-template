@@ -10,7 +10,7 @@ module Stimulus; end
 # source://stimulus-rails//lib/stimulus/engine.rb#2
 class Stimulus::Engine < ::Rails::Engine
   class << self
-    # source://activesupport/7.1.3/lib/active_support/callbacks.rb#70
+    # source://activesupport/7.1.3.2/lib/active_support/callbacks.rb#70
     def __callbacks; end
   end
 end

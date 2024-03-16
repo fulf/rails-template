@@ -21,19 +21,19 @@ module Rswag::Ui
     # source://rswag-ui//lib/rswag/ui.rb#14
     def deprecator; end
 
-    # source://railties/7.1.3/lib/rails/engine.rb#412
+    # source://railties/7.1.3.2/lib/rails/engine.rb#412
     def railtie_helpers_paths; end
 
-    # source://railties/7.1.3/lib/rails/engine.rb#395
+    # source://railties/7.1.3.2/lib/rails/engine.rb#395
     def railtie_namespace; end
 
-    # source://railties/7.1.3/lib/rails/engine.rb#416
+    # source://railties/7.1.3.2/lib/rails/engine.rb#416
     def railtie_routes_url_helpers(include_path_helpers = T.unsafe(nil)); end
 
-    # source://railties/7.1.3/lib/rails/engine.rb#401
+    # source://railties/7.1.3.2/lib/rails/engine.rb#401
     def table_name_prefix; end
 
-    # source://railties/7.1.3/lib/rails/engine.rb#408
+    # source://railties/7.1.3.2/lib/rails/engine.rb#408
     def use_relative_model_naming?; end
   end
 end
@@ -131,7 +131,7 @@ end
 # source://rswag-ui//lib/rswag/ui/engine.rb#6
 class Rswag::Ui::Engine < ::Rails::Engine
   class << self
-    # source://activesupport/7.1.3/lib/active_support/callbacks.rb#70
+    # source://activesupport/7.1.3.2/lib/active_support/callbacks.rb#70
     def __callbacks; end
   end
 end

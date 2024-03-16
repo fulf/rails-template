@@ -60,13 +60,13 @@ module Notable
     # source://notable//lib/notable.rb#60
     def notes; end
 
-    # source://railties/7.1.3/lib/rails/engine.rb#412
+    # source://railties/7.1.3.2/lib/rails/engine.rb#412
     def railtie_helpers_paths; end
 
-    # source://railties/7.1.3/lib/rails/engine.rb#395
+    # source://railties/7.1.3.2/lib/rails/engine.rb#395
     def railtie_namespace; end
 
-    # source://railties/7.1.3/lib/rails/engine.rb#416
+    # source://railties/7.1.3.2/lib/rails/engine.rb#416
     def railtie_routes_url_helpers(include_path_helpers = T.unsafe(nil)); end
 
     # Returns the value of attribute requests_enabled.
@@ -110,7 +110,7 @@ module Notable
     # source://notable//lib/notable.rb#23
     def slow_request_threshold=(_arg0); end
 
-    # source://railties/7.1.3/lib/rails/engine.rb#401
+    # source://railties/7.1.3.2/lib/rails/engine.rb#401
     def table_name_prefix; end
 
     # source://notable//lib/notable.rb#52
@@ -142,7 +142,7 @@ module Notable
     # source://notable//lib/notable.rb#21
     def track_request_method=(_arg0); end
 
-    # source://railties/7.1.3/lib/rails/engine.rb#408
+    # source://railties/7.1.3.2/lib/rails/engine.rb#408
     def use_relative_model_naming?; end
 
     # Returns the value of attribute user_method.
@@ -168,7 +168,7 @@ end
 # source://notable//lib/notable/engine.rb#2
 class Notable::Engine < ::Rails::Engine
   class << self
-    # source://activesupport/7.1.3/lib/active_support/callbacks.rb#70
+    # source://activesupport/7.1.3.2/lib/active_support/callbacks.rb#70
     def __callbacks; end
   end
 end
@@ -178,10 +178,10 @@ class Notable::Job < ::ActiveRecord::Base
   include ::Notable::Job::GeneratedAssociationMethods
 
   class << self
-    # source://activemodel/7.1.3/lib/active_model/validations.rb#71
+    # source://activemodel/7.1.3.2/lib/active_model/validations.rb#71
     def _validators; end
 
-    # source://activerecord/7.1.3/lib/active_record/enum.rb#167
+    # source://activerecord/7.1.3.2/lib/active_record/enum.rb#167
     def defined_enums; end
   end
 end
@@ -209,44 +209,44 @@ class Notable::Request < ::ActiveRecord::Base
   include ::Notable::Request::GeneratedAttributeMethods
   include ::Notable::Request::GeneratedAssociationMethods
 
-  # source://activerecord/7.1.3/lib/active_record/autosave_association.rb#160
+  # source://activerecord/7.1.3.2/lib/active_record/autosave_association.rb#160
   def autosave_associated_records_for_user(*args); end
 
   class << self
-    # source://activesupport/7.1.3/lib/active_support/callbacks.rb#70
+    # source://activesupport/7.1.3.2/lib/active_support/callbacks.rb#70
     def __callbacks; end
 
-    # source://activerecord/7.1.3/lib/active_record/reflection.rb#11
+    # source://activerecord/7.1.3.2/lib/active_record/reflection.rb#11
     def _reflections; end
 
-    # source://activemodel/7.1.3/lib/active_model/validations.rb#71
+    # source://activemodel/7.1.3.2/lib/active_model/validations.rb#71
     def _validators; end
 
-    # source://activerecord/7.1.3/lib/active_record/attributes.rb#11
+    # source://activerecord/7.1.3.2/lib/active_record/attributes.rb#11
     def attributes_to_define_after_schema_loads; end
 
-    # source://activerecord/7.1.3/lib/active_record/enum.rb#167
+    # source://activerecord/7.1.3.2/lib/active_record/enum.rb#167
     def defined_enums; end
   end
 end
 
 module Notable::Request::GeneratedAssociationMethods
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/singular_association.rb#19
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/singular_association.rb#19
   def reload_user; end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/singular_association.rb#23
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/singular_association.rb#23
   def reset_user; end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/association.rb#103
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/association.rb#103
   def user; end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/association.rb#111
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/association.rb#111
   def user=(value); end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/belongs_to.rb#145
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/belongs_to.rb#145
   def user_changed?; end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/belongs_to.rb#149
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/belongs_to.rb#149
   def user_previously_changed?; end
 end
 

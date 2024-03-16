@@ -13,13 +13,13 @@ module Hotwire::Livereload
     # source://hotwire-livereload//lib/hotwire/livereload/engine.rb#103
     def action_cable(opts); end
 
-    # source://railties/7.1.3/lib/rails/engine.rb#412
+    # source://railties/7.1.3.2/lib/rails/engine.rb#412
     def railtie_helpers_paths; end
 
-    # source://railties/7.1.3/lib/rails/engine.rb#395
+    # source://railties/7.1.3.2/lib/rails/engine.rb#395
     def railtie_namespace; end
 
-    # source://railties/7.1.3/lib/rails/engine.rb#416
+    # source://railties/7.1.3.2/lib/rails/engine.rb#416
     def railtie_routes_url_helpers(include_path_helpers = T.unsafe(nil)); end
 
     # @return [Boolean]
@@ -27,13 +27,13 @@ module Hotwire::Livereload
     # source://hotwire-livereload//lib/hotwire/livereload/engine.rb#107
     def server_process?; end
 
-    # source://railties/7.1.3/lib/rails/engine.rb#401
+    # source://railties/7.1.3.2/lib/rails/engine.rb#401
     def table_name_prefix; end
 
     # source://hotwire-livereload//lib/hotwire/livereload/engine.rb#94
     def turbo_stream(locals); end
 
-    # source://railties/7.1.3/lib/rails/engine.rb#408
+    # source://railties/7.1.3.2/lib/rails/engine.rb#408
     def use_relative_model_naming?; end
   end
 end
@@ -44,7 +44,7 @@ Hotwire::Livereload::DISABLE_FILE = T.let(T.unsafe(nil), String)
 # source://hotwire-livereload//lib/hotwire/livereload/engine.rb#7
 class Hotwire::Livereload::Engine < ::Rails::Engine
   class << self
-    # source://activesupport/7.1.3/lib/active_support/callbacks.rb#70
+    # source://activesupport/7.1.3.2/lib/active_support/callbacks.rb#70
     def __callbacks; end
   end
 end
@@ -57,7 +57,7 @@ class Hotwire::Livereload::ReloadChannel < ::ActionCable::Channel::Base
   def subscribed; end
 
   class << self
-    # source://activesupport/7.1.3/lib/active_support/callbacks.rb#70
+    # source://activesupport/7.1.3.2/lib/active_support/callbacks.rb#70
     def __callbacks; end
   end
 end

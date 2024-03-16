@@ -802,11 +802,11 @@ class StrongMigrations::WrappedConnection
   # source://strong_migrations//lib/strong_migrations/schema_dumper.rb#17
   def columns(*args, **options); end
 
-  # source://activesupport/7.1.3/lib/active_support/core_ext/module/delegation.rb#331
+  # source://activesupport/7.1.3.2/lib/active_support/core_ext/module/delegation.rb#331
   def method_missing(method, *args, **_arg2, &block); end
 
   private
 
-  # source://activesupport/7.1.3/lib/active_support/core_ext/module/delegation.rb#323
+  # source://activesupport/7.1.3.2/lib/active_support/core_ext/module/delegation.rb#323
   def respond_to_missing?(name, include_private = T.unsafe(nil)); end
 end

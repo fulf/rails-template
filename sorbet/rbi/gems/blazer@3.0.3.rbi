@@ -166,13 +166,13 @@ module Blazer
     # source://blazer//lib/blazer.rb#70
     def override_csp=(_arg0); end
 
-    # source://railties/7.1.3/lib/rails/engine.rb#412
+    # source://railties/7.1.3.2/lib/rails/engine.rb#412
     def railtie_helpers_paths; end
 
-    # source://railties/7.1.3/lib/rails/engine.rb#395
+    # source://railties/7.1.3.2/lib/rails/engine.rb#395
     def railtie_namespace; end
 
-    # source://railties/7.1.3/lib/rails/engine.rb#416
+    # source://railties/7.1.3.2/lib/rails/engine.rb#416
     def railtie_routes_url_helpers(include_path_helpers = T.unsafe(nil)); end
 
     # source://blazer//lib/blazer.rb#246
@@ -225,7 +225,7 @@ module Blazer
     # source://blazer//lib/blazer.rb#72
     def slack_webhook_url=(_arg0); end
 
-    # source://railties/7.1.3/lib/rails/engine.rb#401
+    # source://railties/7.1.3.2/lib/rails/engine.rb#401
     def table_name_prefix; end
 
     # Returns the value of attribute time_zone.
@@ -274,7 +274,7 @@ module Blazer
     # source://blazer//lib/blazer.rb#238
     def uploads_table_name(name); end
 
-    # source://railties/7.1.3/lib/rails/engine.rb#408
+    # source://railties/7.1.3.2/lib/rails/engine.rb#408
     def use_relative_model_naming?; end
 
     # source://blazer//lib/blazer.rb#99
@@ -938,80 +938,80 @@ class Blazer::Audit < ::Blazer::Record
   include ::Blazer::Audit::GeneratedAttributeMethods
   include ::Blazer::Audit::GeneratedAssociationMethods
 
-  # source://activerecord/7.1.3/lib/active_record/autosave_association.rb#160
+  # source://activerecord/7.1.3.2/lib/active_record/autosave_association.rb#160
   def autosave_associated_records_for_query(*args); end
 
-  # source://activerecord/7.1.3/lib/active_record/autosave_association.rb#160
+  # source://activerecord/7.1.3.2/lib/active_record/autosave_association.rb#160
   def autosave_associated_records_for_user(*args); end
 
   class << self
-    # source://activesupport/7.1.3/lib/active_support/callbacks.rb#70
+    # source://activesupport/7.1.3.2/lib/active_support/callbacks.rb#70
     def __callbacks; end
 
-    # source://activerecord/7.1.3/lib/active_record/reflection.rb#11
+    # source://activerecord/7.1.3.2/lib/active_record/reflection.rb#11
     def _reflections; end
 
-    # source://activemodel/7.1.3/lib/active_model/validations.rb#71
+    # source://activemodel/7.1.3.2/lib/active_model/validations.rb#71
     def _validators; end
 
-    # source://activerecord/7.1.3/lib/active_record/enum.rb#167
+    # source://activerecord/7.1.3.2/lib/active_record/enum.rb#167
     def defined_enums; end
   end
 end
 
 module Blazer::Audit::GeneratedAssociationMethods
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/singular_association.rb#32
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/singular_association.rb#32
   def build_query(*args, &block); end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/singular_association.rb#32
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/singular_association.rb#32
   def build_user(*args, &block); end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/singular_association.rb#36
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/singular_association.rb#36
   def create_query(*args, &block); end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/singular_association.rb#40
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/singular_association.rb#40
   def create_query!(*args, &block); end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/singular_association.rb#36
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/singular_association.rb#36
   def create_user(*args, &block); end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/singular_association.rb#40
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/singular_association.rb#40
   def create_user!(*args, &block); end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/association.rb#103
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/association.rb#103
   def query; end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/association.rb#111
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/association.rb#111
   def query=(value); end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/belongs_to.rb#145
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/belongs_to.rb#145
   def query_changed?; end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/belongs_to.rb#149
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/belongs_to.rb#149
   def query_previously_changed?; end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/singular_association.rb#19
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/singular_association.rb#19
   def reload_query; end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/singular_association.rb#19
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/singular_association.rb#19
   def reload_user; end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/singular_association.rb#23
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/singular_association.rb#23
   def reset_query; end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/singular_association.rb#23
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/singular_association.rb#23
   def reset_user; end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/association.rb#103
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/association.rb#103
   def user; end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/association.rb#111
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/association.rb#111
   def user=(value); end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/belongs_to.rb#145
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/belongs_to.rb#145
   def user_changed?; end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/belongs_to.rb#149
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/belongs_to.rb#149
   def user_previously_changed?; end
 end
 
@@ -1031,7 +1031,7 @@ class Blazer::Check < ::Blazer::Record
   include ::Blazer::Check::GeneratedAttributeMethods
   include ::Blazer::Check::GeneratedAssociationMethods
 
-  # source://activerecord/7.1.3/lib/active_record/autosave_association.rb#160
+  # source://activerecord/7.1.3.2/lib/active_record/autosave_association.rb#160
   def autosave_associated_records_for_query(*args); end
 
   def split_emails; end
@@ -1046,46 +1046,46 @@ class Blazer::Check < ::Blazer::Record
   def validate_variables; end
 
   class << self
-    # source://activesupport/7.1.3/lib/active_support/callbacks.rb#70
+    # source://activesupport/7.1.3.2/lib/active_support/callbacks.rb#70
     def __callbacks; end
 
-    # source://activerecord/7.1.3/lib/active_record/reflection.rb#11
+    # source://activerecord/7.1.3.2/lib/active_record/reflection.rb#11
     def _reflections; end
 
-    # source://activemodel/7.1.3/lib/active_model/validations.rb#71
+    # source://activemodel/7.1.3.2/lib/active_model/validations.rb#71
     def _validators; end
 
-    # source://activerecord/7.1.3/lib/active_record/enum.rb#167
+    # source://activerecord/7.1.3.2/lib/active_record/enum.rb#167
     def defined_enums; end
   end
 end
 
 module Blazer::Check::GeneratedAssociationMethods
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/singular_association.rb#32
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/singular_association.rb#32
   def build_query(*args, &block); end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/singular_association.rb#36
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/singular_association.rb#36
   def create_query(*args, &block); end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/singular_association.rb#40
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/singular_association.rb#40
   def create_query!(*args, &block); end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/association.rb#103
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/association.rb#103
   def query; end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/association.rb#111
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/association.rb#111
   def query=(value); end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/belongs_to.rb#145
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/belongs_to.rb#145
   def query_changed?; end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/belongs_to.rb#149
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/belongs_to.rb#149
   def query_previously_changed?; end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/singular_association.rb#19
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/singular_association.rb#19
   def reload_query; end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/singular_association.rb#23
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/singular_association.rb#23
   def reset_query; end
 end
 
@@ -1108,14 +1108,14 @@ class Blazer::CheckMailer < ::ActionMailer::Base
 
   private
 
-  # source://actionview/7.1.3/lib/action_view/layouts.rb#330
+  # source://actionview/7.1.3.2/lib/action_view/layouts.rb#330
   def _layout(lookup_context, formats); end
 
   class << self
-    # source://actionview/7.1.3/lib/action_view/layouts.rb#211
+    # source://actionview/7.1.3.2/lib/action_view/layouts.rb#211
     def _layout; end
 
-    # source://actionview/7.1.3/lib/action_view/layouts.rb#212
+    # source://actionview/7.1.3.2/lib/action_view/layouts.rb#212
     def _layout_conditions; end
   end
 end
@@ -1125,10 +1125,10 @@ class Blazer::Connection < ::ActiveRecord::Base
   include ::Blazer::Connection::GeneratedAssociationMethods
 
   class << self
-    # source://activemodel/7.1.3/lib/active_model/validations.rb#71
+    # source://activemodel/7.1.3.2/lib/active_model/validations.rb#71
     def _validators; end
 
-    # source://activerecord/7.1.3/lib/active_record/enum.rb#167
+    # source://activerecord/7.1.3.2/lib/active_record/enum.rb#167
     def defined_enums; end
   end
 end
@@ -1140,60 +1140,60 @@ class Blazer::Dashboard < ::Blazer::Record
   include ::Blazer::Dashboard::GeneratedAttributeMethods
   include ::Blazer::Dashboard::GeneratedAssociationMethods
 
-  # source://activerecord/7.1.3/lib/active_record/autosave_association.rb#160
+  # source://activerecord/7.1.3.2/lib/active_record/autosave_association.rb#160
   def autosave_associated_records_for_dashboard_queries(*args); end
 
-  # source://activerecord/7.1.3/lib/active_record/autosave_association.rb#160
+  # source://activerecord/7.1.3.2/lib/active_record/autosave_association.rb#160
   def autosave_associated_records_for_queries(*args); end
 
   def to_param; end
 
-  # source://activerecord/7.1.3/lib/active_record/autosave_association.rb#160
+  # source://activerecord/7.1.3.2/lib/active_record/autosave_association.rb#160
   def validate_associated_records_for_dashboard_queries(*args); end
 
-  # source://activerecord/7.1.3/lib/active_record/autosave_association.rb#160
+  # source://activerecord/7.1.3.2/lib/active_record/autosave_association.rb#160
   def validate_associated_records_for_queries(*args); end
 
   def variables; end
 
   class << self
-    # source://activesupport/7.1.3/lib/active_support/callbacks.rb#70
+    # source://activesupport/7.1.3.2/lib/active_support/callbacks.rb#70
     def __callbacks; end
 
-    # source://activerecord/7.1.3/lib/active_record/reflection.rb#11
+    # source://activerecord/7.1.3.2/lib/active_record/reflection.rb#11
     def _reflections; end
 
-    # source://activemodel/7.1.3/lib/active_model/validations.rb#71
+    # source://activemodel/7.1.3.2/lib/active_model/validations.rb#71
     def _validators; end
 
-    # source://activerecord/7.1.3/lib/active_record/enum.rb#167
+    # source://activerecord/7.1.3.2/lib/active_record/enum.rb#167
     def defined_enums; end
   end
 end
 
 module Blazer::Dashboard::GeneratedAssociationMethods
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/association.rb#103
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/association.rb#103
   def dashboard_queries; end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/association.rb#111
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/association.rb#111
   def dashboard_queries=(value); end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/collection_association.rb#62
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/collection_association.rb#62
   def dashboard_query_ids; end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/collection_association.rb#72
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/collection_association.rb#72
   def dashboard_query_ids=(ids); end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/association.rb#103
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/association.rb#103
   def queries; end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/association.rb#111
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/association.rb#111
   def queries=(value); end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/collection_association.rb#62
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/collection_association.rb#62
   def query_ids; end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/collection_association.rb#72
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/collection_association.rb#72
   def query_ids=(ids); end
 end
 
@@ -1203,80 +1203,80 @@ class Blazer::DashboardQuery < ::Blazer::Record
   include ::Blazer::DashboardQuery::GeneratedAttributeMethods
   include ::Blazer::DashboardQuery::GeneratedAssociationMethods
 
-  # source://activerecord/7.1.3/lib/active_record/autosave_association.rb#160
+  # source://activerecord/7.1.3.2/lib/active_record/autosave_association.rb#160
   def autosave_associated_records_for_dashboard(*args); end
 
-  # source://activerecord/7.1.3/lib/active_record/autosave_association.rb#160
+  # source://activerecord/7.1.3.2/lib/active_record/autosave_association.rb#160
   def autosave_associated_records_for_query(*args); end
 
   class << self
-    # source://activesupport/7.1.3/lib/active_support/callbacks.rb#70
+    # source://activesupport/7.1.3.2/lib/active_support/callbacks.rb#70
     def __callbacks; end
 
-    # source://activerecord/7.1.3/lib/active_record/reflection.rb#11
+    # source://activerecord/7.1.3.2/lib/active_record/reflection.rb#11
     def _reflections; end
 
-    # source://activemodel/7.1.3/lib/active_model/validations.rb#71
+    # source://activemodel/7.1.3.2/lib/active_model/validations.rb#71
     def _validators; end
 
-    # source://activerecord/7.1.3/lib/active_record/enum.rb#167
+    # source://activerecord/7.1.3.2/lib/active_record/enum.rb#167
     def defined_enums; end
   end
 end
 
 module Blazer::DashboardQuery::GeneratedAssociationMethods
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/singular_association.rb#32
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/singular_association.rb#32
   def build_dashboard(*args, &block); end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/singular_association.rb#32
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/singular_association.rb#32
   def build_query(*args, &block); end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/singular_association.rb#36
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/singular_association.rb#36
   def create_dashboard(*args, &block); end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/singular_association.rb#40
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/singular_association.rb#40
   def create_dashboard!(*args, &block); end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/singular_association.rb#36
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/singular_association.rb#36
   def create_query(*args, &block); end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/singular_association.rb#40
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/singular_association.rb#40
   def create_query!(*args, &block); end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/association.rb#103
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/association.rb#103
   def dashboard; end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/association.rb#111
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/association.rb#111
   def dashboard=(value); end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/belongs_to.rb#145
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/belongs_to.rb#145
   def dashboard_changed?; end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/belongs_to.rb#149
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/belongs_to.rb#149
   def dashboard_previously_changed?; end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/association.rb#103
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/association.rb#103
   def query; end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/association.rb#111
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/association.rb#111
   def query=(value); end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/belongs_to.rb#145
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/belongs_to.rb#145
   def query_changed?; end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/belongs_to.rb#149
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/belongs_to.rb#149
   def query_previously_changed?; end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/singular_association.rb#19
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/singular_association.rb#19
   def reload_dashboard; end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/singular_association.rb#19
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/singular_association.rb#19
   def reload_query; end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/singular_association.rb#23
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/singular_association.rb#23
   def reset_dashboard; end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/singular_association.rb#23
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/singular_association.rb#23
   def reset_query; end
 end
 
@@ -1411,7 +1411,7 @@ end
 # source://blazer//lib/blazer/engine.rb#2
 class Blazer::Engine < ::Rails::Engine
   class << self
-    # source://activesupport/7.1.3/lib/active_support/callbacks.rb#70
+    # source://activesupport/7.1.3.2/lib/active_support/callbacks.rb#70
     def __callbacks; end
   end
 end
@@ -1423,16 +1423,16 @@ class Blazer::Query < ::Blazer::Record
   include ::Blazer::Query::GeneratedAttributeMethods
   include ::Blazer::Query::GeneratedAssociationMethods
 
-  # source://activerecord/7.1.3/lib/active_record/autosave_association.rb#160
+  # source://activerecord/7.1.3.2/lib/active_record/autosave_association.rb#160
   def autosave_associated_records_for_audits(*args); end
 
-  # source://activerecord/7.1.3/lib/active_record/autosave_association.rb#160
+  # source://activerecord/7.1.3.2/lib/active_record/autosave_association.rb#160
   def autosave_associated_records_for_checks(*args); end
 
-  # source://activerecord/7.1.3/lib/active_record/autosave_association.rb#160
+  # source://activerecord/7.1.3.2/lib/active_record/autosave_association.rb#160
   def autosave_associated_records_for_dashboard_queries(*args); end
 
-  # source://activerecord/7.1.3/lib/active_record/autosave_association.rb#160
+  # source://activerecord/7.1.3.2/lib/active_record/autosave_association.rb#160
   def autosave_associated_records_for_dashboards(*args); end
 
   def cohort_analysis?; end
@@ -1441,88 +1441,88 @@ class Blazer::Query < ::Blazer::Record
   def statement_object; end
   def to_param; end
 
-  # source://activerecord/7.1.3/lib/active_record/autosave_association.rb#160
+  # source://activerecord/7.1.3.2/lib/active_record/autosave_association.rb#160
   def validate_associated_records_for_audits(*args); end
 
-  # source://activerecord/7.1.3/lib/active_record/autosave_association.rb#160
+  # source://activerecord/7.1.3.2/lib/active_record/autosave_association.rb#160
   def validate_associated_records_for_checks(*args); end
 
-  # source://activerecord/7.1.3/lib/active_record/autosave_association.rb#160
+  # source://activerecord/7.1.3.2/lib/active_record/autosave_association.rb#160
   def validate_associated_records_for_dashboard_queries(*args); end
 
-  # source://activerecord/7.1.3/lib/active_record/autosave_association.rb#160
+  # source://activerecord/7.1.3.2/lib/active_record/autosave_association.rb#160
   def validate_associated_records_for_dashboards(*args); end
 
   def variables; end
 
   class << self
-    # source://activesupport/7.1.3/lib/active_support/callbacks.rb#70
+    # source://activesupport/7.1.3.2/lib/active_support/callbacks.rb#70
     def __callbacks; end
 
-    # source://activerecord/7.1.3/lib/active_record/reflection.rb#11
+    # source://activerecord/7.1.3.2/lib/active_record/reflection.rb#11
     def _reflections; end
 
-    # source://activemodel/7.1.3/lib/active_model/validations.rb#71
+    # source://activemodel/7.1.3.2/lib/active_model/validations.rb#71
     def _validators; end
 
-    # source://activerecord/7.1.3/lib/active_record/scoping/named.rb#174
+    # source://activerecord/7.1.3.2/lib/active_record/scoping/named.rb#174
     def active(*args, **_arg1); end
 
-    # source://activerecord/7.1.3/lib/active_record/enum.rb#167
+    # source://activerecord/7.1.3.2/lib/active_record/enum.rb#167
     def defined_enums; end
 
-    # source://activerecord/7.1.3/lib/active_record/scoping/named.rb#174
+    # source://activerecord/7.1.3.2/lib/active_record/scoping/named.rb#174
     def named(*args, **_arg1); end
   end
 end
 
 module Blazer::Query::GeneratedAssociationMethods
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/collection_association.rb#62
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/collection_association.rb#62
   def audit_ids; end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/collection_association.rb#72
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/collection_association.rb#72
   def audit_ids=(ids); end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/association.rb#103
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/association.rb#103
   def audits; end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/association.rb#111
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/association.rb#111
   def audits=(value); end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/collection_association.rb#62
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/collection_association.rb#62
   def check_ids; end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/collection_association.rb#72
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/collection_association.rb#72
   def check_ids=(ids); end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/association.rb#103
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/association.rb#103
   def checks; end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/association.rb#111
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/association.rb#111
   def checks=(value); end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/collection_association.rb#62
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/collection_association.rb#62
   def dashboard_ids; end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/collection_association.rb#72
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/collection_association.rb#72
   def dashboard_ids=(ids); end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/association.rb#103
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/association.rb#103
   def dashboard_queries; end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/association.rb#111
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/association.rb#111
   def dashboard_queries=(value); end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/collection_association.rb#62
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/collection_association.rb#62
   def dashboard_query_ids; end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/collection_association.rb#72
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/collection_association.rb#72
   def dashboard_query_ids=(ids); end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/association.rb#103
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/association.rb#103
   def dashboards; end
 
-  # source://activerecord/7.1.3/lib/active_record/associations/builder/association.rb#111
+  # source://activerecord/7.1.3.2/lib/active_record/associations/builder/association.rb#111
   def dashboards=(value); end
 end
 
@@ -1533,10 +1533,10 @@ class Blazer::Record < ::ActiveRecord::Base
   include ::Blazer::Record::GeneratedAssociationMethods
 
   class << self
-    # source://activemodel/7.1.3/lib/active_model/validations.rb#71
+    # source://activemodel/7.1.3.2/lib/active_model/validations.rb#71
     def _validators; end
 
-    # source://activerecord/7.1.3/lib/active_record/enum.rb#167
+    # source://activerecord/7.1.3.2/lib/active_record/enum.rb#167
     def defined_enums; end
   end
 end
@@ -1708,10 +1708,10 @@ class Blazer::RunStatementJob < ::ActiveJob::Base
   def perform(data_source_id, statement, options); end
 
   class << self
-    # source://activejob/7.1.3/lib/active_job/queue_adapter.rb#24
+    # source://activejob/7.1.3.2/lib/active_job/queue_adapter.rb#24
     def _queue_adapter; end
 
-    # source://activejob/7.1.3/lib/active_job/queue_adapter.rb#23
+    # source://activejob/7.1.3.2/lib/active_job/queue_adapter.rb#23
     def _queue_adapter_name; end
   end
 end
@@ -1839,13 +1839,13 @@ class Blazer::Upload < ::Blazer::Record
   def table_name; end
 
   class << self
-    # source://activesupport/7.1.3/lib/active_support/callbacks.rb#70
+    # source://activesupport/7.1.3.2/lib/active_support/callbacks.rb#70
     def __callbacks; end
 
-    # source://activemodel/7.1.3/lib/active_model/validations.rb#71
+    # source://activemodel/7.1.3.2/lib/active_model/validations.rb#71
     def _validators; end
 
-    # source://activerecord/7.1.3/lib/active_record/enum.rb#167
+    # source://activerecord/7.1.3.2/lib/active_record/enum.rb#167
     def defined_enums; end
   end
 end
@@ -1861,10 +1861,10 @@ class Blazer::UploadsConnection < ::ActiveRecord::Base
   include ::Blazer::UploadsConnection::GeneratedAssociationMethods
 
   class << self
-    # source://activemodel/7.1.3/lib/active_model/validations.rb#71
+    # source://activemodel/7.1.3.2/lib/active_model/validations.rb#71
     def _validators; end
 
-    # source://activerecord/7.1.3/lib/active_record/enum.rb#167
+    # source://activerecord/7.1.3.2/lib/active_record/enum.rb#167
     def defined_enums; end
   end
 end

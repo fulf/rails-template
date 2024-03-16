@@ -2277,19 +2277,19 @@ class RSpec::Core::Configuration
   # source://rspec-core//lib/rspec/core/configuration.rb#78
   def success_color?; end
 
-  # source://activesupport/7.1.3/lib/active_support/deprecation/method_wrappers.rb#46
+  # source://activesupport/7.1.3.2/lib/active_support/deprecation/method_wrappers.rb#46
   def swagger_docs=(*args, **_arg1, &block); end
 
-  # source://activesupport/7.1.3/lib/active_support/deprecation/method_wrappers.rb#46
+  # source://activesupport/7.1.3.2/lib/active_support/deprecation/method_wrappers.rb#46
   def swagger_dry_run=(*args, **_arg1, &block); end
 
-  # source://activesupport/7.1.3/lib/active_support/deprecation/method_wrappers.rb#46
+  # source://activesupport/7.1.3.2/lib/active_support/deprecation/method_wrappers.rb#46
   def swagger_format=(*args, **_arg1, &block); end
 
-  # source://activesupport/7.1.3/lib/active_support/deprecation/method_wrappers.rb#46
+  # source://activesupport/7.1.3.2/lib/active_support/deprecation/method_wrappers.rb#46
   def swagger_root=(*args, **_arg1, &block); end
 
-  # source://activesupport/7.1.3/lib/active_support/deprecation/method_wrappers.rb#46
+  # source://activesupport/7.1.3.2/lib/active_support/deprecation/method_wrappers.rb#46
   def swagger_strict_schema_validation=(*args, **_arg1, &block); end
 
   # Use threadsafe options where available.

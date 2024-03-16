@@ -20,10 +20,10 @@
 # source://rack-attack//lib/rack/attack/cache.rb#3
 module Rack
   class << self
-    # source://rack/3.0.9/lib/rack/version.rb#31
+    # source://rack/3.0.9.1/lib/rack/version.rb#31
     def release; end
 
-    # source://rack/3.0.9/lib/rack/version.rb#23
+    # source://rack/3.0.9.1/lib/rack/version.rb#23
     def version; end
   end
 end

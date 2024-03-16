@@ -21,19 +21,19 @@ module Rswag::Api
     # source://rswag-api//lib/rswag/api.rb#20
     def deprecator; end
 
-    # source://railties/7.1.3/lib/rails/engine.rb#412
+    # source://railties/7.1.3.2/lib/rails/engine.rb#412
     def railtie_helpers_paths; end
 
-    # source://railties/7.1.3/lib/rails/engine.rb#395
+    # source://railties/7.1.3.2/lib/rails/engine.rb#395
     def railtie_namespace; end
 
-    # source://railties/7.1.3/lib/rails/engine.rb#416
+    # source://railties/7.1.3.2/lib/rails/engine.rb#416
     def railtie_routes_url_helpers(include_path_helpers = T.unsafe(nil)); end
 
-    # source://railties/7.1.3/lib/rails/engine.rb#401
+    # source://railties/7.1.3.2/lib/rails/engine.rb#401
     def table_name_prefix; end
 
-    # source://railties/7.1.3/lib/rails/engine.rb#408
+    # source://railties/7.1.3.2/lib/rails/engine.rb#408
     def use_relative_model_naming?; end
   end
 end
@@ -79,14 +79,14 @@ class Rswag::Api::Configuration
   # source://rswag-api//lib/rswag/api/configuration.rb#4
   def swagger_headers=(_arg0); end
 
-  # source://activesupport/7.1.3/lib/active_support/deprecation/method_wrappers.rb#46
+  # source://activesupport/7.1.3.2/lib/active_support/deprecation/method_wrappers.rb#46
   def swagger_root=(*args, **_arg1, &block); end
 end
 
 # source://rswag-api//lib/rswag/api/engine.rb#5
 class Rswag::Api::Engine < ::Rails::Engine
   class << self
-    # source://activesupport/7.1.3/lib/active_support/callbacks.rb#70
+    # source://activesupport/7.1.3.2/lib/active_support/callbacks.rb#70
     def __callbacks; end
   end
 end

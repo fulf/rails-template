@@ -208,7 +208,7 @@ class RBI::TypedParam < ::T::Struct
   const :type, ::String
 
   class << self
-    # source://sorbet-runtime/0.5.11267/lib/types/struct.rb#13
+    # source://sorbet-runtime/0.5.11287/lib/types/struct.rb#13
     def inherited(s); end
   end
 end
@@ -863,7 +863,7 @@ class Tapioca::Commands::Command
   sig { void }
   def initialize; end
 
-  # source://thor/1.3.0/lib/thor/base.rb#155
+  # source://thor/1.3.1/lib/thor/base.rb#155
   sig { returns(::Thor::Actions) }
   def file_writer; end
 
@@ -1125,7 +1125,7 @@ class Tapioca::ConfigHelper::ConfigError < ::T::Struct
   const :message_parts, T::Array[::Tapioca::ConfigHelper::ConfigErrorMessagePart]
 
   class << self
-    # source://sorbet-runtime/0.5.11267/lib/types/struct.rb#13
+    # source://sorbet-runtime/0.5.11287/lib/types/struct.rb#13
     def inherited(s); end
   end
 end
@@ -1136,7 +1136,7 @@ class Tapioca::ConfigHelper::ConfigErrorMessagePart < ::T::Struct
   const :colors, T::Array[::Symbol]
 
   class << self
-    # source://sorbet-runtime/0.5.11267/lib/types/struct.rb#13
+    # source://sorbet-runtime/0.5.11287/lib/types/struct.rb#13
     def inherited(s); end
   end
 end

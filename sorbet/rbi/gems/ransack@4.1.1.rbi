@@ -17,54 +17,54 @@ class ActionView::Helpers::Tags::Base
   include ::ActionView::Helpers::OutputSafetyHelper
   include ::ActionView::Helpers::ContentExfiltrationPreventionHelper
 
-  # source://actionview/7.1.3/lib/action_view/helpers/tags/base.rb#11
+  # source://actionview/7.1.3.2/lib/action_view/helpers/tags/base.rb#11
   def initialize(object_name, method_name, template_object, options = T.unsafe(nil)); end
 
-  # source://actionview/7.1.3/lib/action_view/helpers/tags/base.rb#9
+  # source://actionview/7.1.3.2/lib/action_view/helpers/tags/base.rb#9
   def object; end
 
-  # source://actionview/7.1.3/lib/action_view/helpers/tags/base.rb#31
+  # source://actionview/7.1.3.2/lib/action_view/helpers/tags/base.rb#31
   def render; end
 
   private
 
-  # source://actionview/7.1.3/lib/action_view/helpers/tags/base.rb#96
+  # source://actionview/7.1.3.2/lib/action_view/helpers/tags/base.rb#96
   def add_default_name_and_id(options); end
 
-  # source://actionview/7.1.3/lib/action_view/helpers/tags/base.rb#83
+  # source://actionview/7.1.3.2/lib/action_view/helpers/tags/base.rb#83
   def add_default_name_and_id_for_value(tag_value, options); end
 
-  # source://actionview/7.1.3/lib/action_view/helpers/tags/base.rb#132
+  # source://actionview/7.1.3.2/lib/action_view/helpers/tags/base.rb#132
   def generate_ids?; end
 
-  # source://actionview/7.1.3/lib/action_view/helpers/tags/base.rb#124
+  # source://actionview/7.1.3.2/lib/action_view/helpers/tags/base.rb#124
   def name_and_id_index(options); end
 
-  # source://actionview/7.1.3/lib/action_view/helpers/tags/base.rb#74
+  # source://actionview/7.1.3.2/lib/action_view/helpers/tags/base.rb#74
   def retrieve_autoindex(pre_match); end
 
-  # source://actionview/7.1.3/lib/action_view/helpers/tags/base.rb#63
+  # source://actionview/7.1.3.2/lib/action_view/helpers/tags/base.rb#63
   def retrieve_object(object); end
 
-  # source://actionview/7.1.3/lib/action_view/helpers/tags/base.rb#116
+  # source://actionview/7.1.3.2/lib/action_view/helpers/tags/base.rb#116
   def sanitized_method_name; end
 
-  # source://actionview/7.1.3/lib/action_view/helpers/tags/base.rb#120
+  # source://actionview/7.1.3.2/lib/action_view/helpers/tags/base.rb#120
   def sanitized_value(value); end
 
-  # source://actionview/7.1.3/lib/action_view/helpers/tags/base.rb#112
+  # source://actionview/7.1.3.2/lib/action_view/helpers/tags/base.rb#112
   def tag_id(index = T.unsafe(nil), namespace = T.unsafe(nil)); end
 
-  # source://actionview/7.1.3/lib/action_view/helpers/tags/base.rb#108
+  # source://actionview/7.1.3.2/lib/action_view/helpers/tags/base.rb#108
   def tag_name(multiple = T.unsafe(nil), index = T.unsafe(nil)); end
 
   # source://ransack//lib/ransack/helpers/form_builder.rb#10
   def value; end
 
-  # source://actionview/7.1.3/lib/action_view/helpers/tags/base.rb#46
+  # source://actionview/7.1.3.2/lib/action_view/helpers/tags/base.rb#46
   def value_before_type_cast; end
 
-  # source://actionview/7.1.3/lib/action_view/helpers/tags/base.rb#58
+  # source://actionview/7.1.3.2/lib/action_view/helpers/tags/base.rb#58
   def value_came_from_user?; end
 end
 
