@@ -15,6 +15,7 @@ Rails.application.routes.draw do
       mount Sidekiq::Web, at: 'sidekiq'
       mount Blazer::Engine, at: 'blazer'
       mount FieldTest::Engine, at: 'field_test'
+      mount Coverband::Reporters::Web.new, at: 'coverage'
     end
   end
 

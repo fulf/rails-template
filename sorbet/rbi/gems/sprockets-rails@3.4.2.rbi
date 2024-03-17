@@ -719,7 +719,7 @@ class Rails::Engine < ::Rails::Railtie
   # source://railties/7.1.3.2/lib/rails/engine.rb#553
   def config; end
 
-  # source://railties/7.1.3.2/lib/rails/engine.rb#491
+  # source://coverband/6.0.2/lib/coverband/utils/railtie.rb#5
   def eager_load!; end
 
   # source://railties/7.1.3.2/lib/rails/engine.rb#529

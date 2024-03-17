@@ -84,6 +84,8 @@ gem 'rswag-ui'
 
 gem 'sorbet-runtime'
 
+gem 'coverband'
+
 gem 'authtrail'
 gem 'blind_index'
 gem 'devise'
@@ -152,6 +154,11 @@ group :test do
   gem 'capybara'
   gem 'rspec-github', require: false
   gem 'selenium-webdriver'
+
+  gem 'shoulda-matchers', '~> 6.0'
+
+  gem 'simplecov', require: false
+  gem 'simplecov-tailwindcss', require: false
 end
 
 gem 'hotwire-livereload', '~> 1.3', group: :development

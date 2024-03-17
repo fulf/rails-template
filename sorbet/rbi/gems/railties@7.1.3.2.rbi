@@ -2489,7 +2489,7 @@ class Rails::Engine < ::Rails::Railtie
   # source://railties//lib/rails/engine.rb#553
   def config; end
 
-  # source://railties//lib/rails/engine.rb#491
+  # source://coverband/6.0.2/lib/coverband/utils/railtie.rb#5
   def eager_load!; end
 
   # Returns the endpoint for this engine. If none is registered,
