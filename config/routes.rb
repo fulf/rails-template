@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     mount PgHero::Engine, at: 'pghero'
     mount Sidekiq::Web, at: 'sidekiq'
     mount Blazer::Engine, at: 'blazer'
+    mount Coverband::Reporters::Web.new, at: 'coverage'
   end
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

@@ -84,6 +84,8 @@ gem 'rswag-ui'
 
 gem 'sorbet-runtime'
 
+gem 'coverband'
+
 group :development, :test do
   gem 'bullet'
 

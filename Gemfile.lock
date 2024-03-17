@@ -115,6 +115,8 @@ GEM
       csv
     concurrent-ruby (1.2.3)
     connection_pool (2.4.1)
+    coverband (6.0.2)
+      redis (>= 3.0)
     crass (1.0.6)
     csv (3.2.8)
     data_migrate (9.3.0)
@@ -511,6 +513,7 @@ DEPENDENCIES
   bullet
   bundler-audit
   capybara
+  coverband
   data_migrate
   debug
   discard
