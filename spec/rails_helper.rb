@@ -1,6 +1,20 @@
 # typed: false
 # frozen_string_literal: true
 
+require 'simplecov'
+require 'simplecov-tailwindcss'
+
+SimpleCov.start 'rails' do
+  enable_coverage :branch
+
+  formatter SimpleCov::Formatter::MultiFormatter.new(
+    [
+      SimpleCov::Formatter::SimpleFormatter,
+      SimpleCov::Formatter::TailwindFormatter
+    ]
+  )
+end
+
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'

@@ -136,6 +136,9 @@ group :test do
   gem 'selenium-webdriver'
 
   gem 'shoulda-matchers', '~> 6.0'
+
+  gem 'simplecov', require: false
+  gem 'simplecov-tailwindcss', require: false
 end
 
 gem 'hotwire-livereload', '~> 1.3', group: :development
