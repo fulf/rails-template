@@ -36,3 +36,5 @@
 
 # Ignore code coverage reports
 /coverage/
+/app/assets/builds/*
+!/app/assets/builds/.keep

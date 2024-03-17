@@ -462,6 +462,14 @@ GEM
       activerecord (>= 5.2)
     syntax_tree (6.2.0)
       prettier_print (>= 1.2.0)
+    tailwindcss-rails (2.3.0-aarch64-linux)
+      railties (>= 6.0.0)
+    tailwindcss-rails (2.3.0-arm64-darwin)
+      railties (>= 6.0.0)
+    tailwindcss-rails (2.3.0-x86_64-darwin)
+      railties (>= 6.0.0)
+    tailwindcss-rails (2.3.0-x86_64-linux)
+      railties (>= 6.0.0)
     tapioca (0.12.0)
       bundler (>= 2.2.25)
       netrc (>= 0.11.0)
@@ -565,6 +573,7 @@ DEPENDENCIES
   stackprof
   stimulus-rails
   strong_migrations
+  tailwindcss-rails (~> 2.3)
   tapioca
   turbo-rails
   tzinfo-data
