@@ -134,6 +134,8 @@ group :test do
   gem 'capybara'
   gem 'rspec-github', require: false
   gem 'selenium-webdriver'
+
+  gem 'shoulda-matchers', '~> 6.0'
 end
 
 gem 'hotwire-livereload', '~> 1.3', group: :development
