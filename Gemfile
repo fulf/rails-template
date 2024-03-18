@@ -143,7 +143,7 @@ group :test do
   gem 'rspec-github', require: false
   gem 'selenium-webdriver'
 
-  gem 'shoulda-matchers', '~> 6.0'
+  gem 'shoulda-matchers', '~> 6.2'
 
   gem 'simplecov', require: false
   gem 'simplecov-tailwindcss', require: false
