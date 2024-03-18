@@ -21,6 +21,12 @@ module GeneratedPathHelpersModule
   def pg_hero_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }
+  def preview_view_component_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def preview_view_components_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
   def rails_blob_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }
@@ -97,9 +103,6 @@ module GeneratedPathHelpersModule
 
   sig { params(args: T.untyped).returns(String) }
   def rails_storage_redirect_path(*args); end
-
-  sig { params(args: T.untyped).returns(String) }
-  def root_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }
   def rswag_api_path(*args); end

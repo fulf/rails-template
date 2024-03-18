@@ -21,6 +21,12 @@ module GeneratedUrlHelpersModule
   def pg_hero_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
+  def preview_view_component_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def preview_view_components_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
   def rails_blob_representation_proxy_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
@@ -97,9 +103,6 @@ module GeneratedUrlHelpersModule
 
   sig { params(args: T.untyped).returns(String) }
   def rails_storage_redirect_url(*args); end
-
-  sig { params(args: T.untyped).returns(String) }
-  def root_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
   def rswag_api_url(*args); end

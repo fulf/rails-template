@@ -27,6 +27,7 @@ class Rails::Conductor::BaseController
     include ::Ransack::Helpers::FormHelper
     include ::ActionController::Base::HelperMethods
     include ::ApplicationHelper
+    include ::PreviewHelper
   end
 
   class HelperProxy < ::ActionView::Base
