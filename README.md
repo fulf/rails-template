@@ -1,14 +1,4 @@
 ```mermaid
-info
-```
-
-```mermaid
-icons:
-    - name: logos
-      url: https://unpkg.com/@iconify-json/logos@1/icons.json
-```
-
-```mermaid
 ---
 icons:
     - name: logos
