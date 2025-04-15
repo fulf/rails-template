@@ -1,3 +1,4 @@
+```mermaid
 ---
 icons:
     - name: logos
@@ -14,6 +15,7 @@ architecture-beta
     db:L -- R:server
     disk1:T -- B:server
     disk2:T -- B:db
+```
 
 # README
 
