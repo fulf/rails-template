@@ -1,4 +1,13 @@
 ```mermaid
+flowchart TD
+    B[<img src='https://iconscout.com/ms-icon-310x310.png' width='40' height='40' />]
+    B-->C["fa:fa-car"]
+    B-->D[fa:fa-car]
+    B-->F(":heart:")
+    B-->G(:heart:);
+```
+
+```mermaid
 ---
 icons:
     - name: logos
