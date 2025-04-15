@@ -17,6 +17,24 @@ architecture-beta
     disk2:T -- B:db
 ```
 
+```mermaid
+flowchart LR
+    A[fa:fa-user Alice] --> B[fa:fa-user Bob]
+```
+
+
+```mermaid
+%% https://cdn.worldvectorlogo.com/logos/aws-lambda-1.svg
+
+flowchart LR
+i("
+<img src='https://cdn.worldvectorlogo.com/logos/aws-lambda-1.svg' style='max-width:1000px;min-height:0'/>
+") -..-> Minimize
+
+classDef image fill:none,stroke:none
+class i image
+```
+
 # README
 
 This README would normally document whatever steps are necessary to get the
