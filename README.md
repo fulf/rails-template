@@ -24,3 +24,5 @@ Things you may want to cover:
 * ...
 
 Testing gitlens now
+
+Another line
